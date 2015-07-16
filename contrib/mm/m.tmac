@@ -2083,7 +2083,9 @@ in=\\n[.i] fi=\\n[.u] .d=\\n[.d] nl=\\n[nl] pg=\\n[%]
 'in 0
 .di ds*div!\\n[ds*snr]
 .\"
-.ds@set-new-ev \\n[ds*old-ll]
+.nr ds*div-ll \\n[ds*old-ll]
+.if \\n[ds*format]=1 .nr ds*div-ll -\\n(Sin
+.ds@set-new-ev \\n[ds*div-ll]
 .nr df*float 0
 ..
 .\"--------------------------------------------
