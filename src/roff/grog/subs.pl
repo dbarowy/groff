@@ -6,11 +6,13 @@
 # Source file position: <groff-source>/src/roff/grog/subs.pl
 # Installed position: <prefix>/lib/grog/subs.pl
 
-# Copyright (C) 1993-2014  Free Software Foundation, Inc.
+# Copyright (C) 1993-2015  Free Software Foundation, Inc.
 # This file was split from grog.pl and put under GPL2 by
 #               Bernd Warken <groff-bernd.warken-72@web.de>.
 # The macros for identifying the devices were taken from Ralph
 # Corderoy's `grog.sh' of 2006.
+
+# Last update: 19 Jul 2015
 
 # This file is part of `grog', which is part of `groff'.
 
@@ -39,6 +41,9 @@ use File::Spec;
 
 # printing of hashes: my %hash = ...; print Dumper(\%hash);
 use Data::Dumper;
+
+# for running shell based programs within Perl; use `` instead of
+# use IPC::System::Simple qw(capture capturex run runx system systemx);
 
 $\ = "\n";
 
@@ -105,6 +110,7 @@ my %Groff =
    'AI' => 0,		# ms
    'AU' => 0,		# ms
    'NH' => 0,		# ms
+   'TH_later' => 0,	# TH not 1st command is ms
    'TL' => 0,		# ms
    'UL' => 0,		# ms
    'XP' => 0,		# ms
@@ -118,7 +124,7 @@ my %Groff =
    'OP' => 0,		# man
    'SS' => 0,		# man
    'SY' => 0,		# man
-   'TH' => 0,		# man
+   'TH_first' => 0,	# TH as 1st command is man
    'TP' => 0,		# man
    'UR' => 0,		# man
    'YS' => 0,		# man
@@ -162,6 +168,16 @@ my %preprocs_tmacs =
 my @filespec;
 
 my $tmac_ext = '';
+
+
+########################################################################
+# err()
+########################################################################
+
+sub err {
+  my $text = shift;
+  print STDERR $text;
+}
 
 
 ########################################################################
@@ -330,20 +346,20 @@ sub handle_file_ext {
     next if ( $ext =~ /^(
 			 chem|
 			 eqn|
-			 pic|
-			 tbl|
-			 ref|
-			 t|
-			 tr|
 			 g|
-			 groff|
-			 roff|
-			 www|
-			 hdtbl|
 			 grap|
 			 grn|
+			 groff|
+			 hdtbl|
 			 pdfroff|
-			 pinyin
+			 pic|
+			 pinyin|
+			 ref|
+			 roff|
+			 t|
+			 tbl|
+			 tr|
+			 www
 		       )$/x );
 
 ##### handle_file_ext()
@@ -430,7 +446,7 @@ sub handle_whole_files {
 	# not an option line
 	&do_line( $line, $file );
       }
-    } else { # emptry line
+    } else { # empty line
       next;
     }
 
@@ -537,6 +553,8 @@ sub do_first_line {
 # do_line()
 ########################################################################
 
+my $before_first_command = 1; # for check of .TH
+
 sub do_line {
   my ( $line, $file ) = @_;
 
@@ -550,6 +568,16 @@ sub do_line {
 
   return if ( $line =~ /^\.$/ );	# ignore .
   return if ( $line =~ /^\.\.$/ );	# ignore ..
+
+  if ( $before_first_command ) { # so far without 1st command
+    if ( $line =~ /^\.TH/ ) {
+      # check if .TH is 1st command for man
+      $Groff{'TH_first'} = 1 if ( $line =~ /^\.\s*TH/ );
+    }
+    if ( $line =~ /^\./ ) {
+      $before_first_command = 0;
+    }
+  }
 
   # split command
   $line =~ /^(\.\w+)\s*(.*)$/;
@@ -656,6 +684,12 @@ sub do_line {
   }
   if ( $command =~ /^\.TS$/ ) {
     $Groff{'tbl'}++;		# for tbl
+    return;
+  }
+  if ( $command =~ /^\.TH$/ ) {
+    unless ( $Groff{'TH_first'} ) {
+      $Groff{'TH_later'}++;		# for tbl
+    }
     return;
   }
 
@@ -777,10 +811,6 @@ sub do_line {
     $Groff{'SY'}++;
     return;
   }
-  if ( $command =~ /^\.TH$/ ) {
-    $Groff{'TH'}++;		# for man
-    return;
-  }
   if ( $command =~ /^\.TP$/ ) {	# for man
     $Groff{'TP'}++;
     return;
@@ -872,42 +902,46 @@ sub make_groff_device {
   # globals: @devices
 
   # default device is empty, i.e. it is `ps' when without `-T'
-  return '' unless ( @devices );
+  my $device = '';
 
-  for ( @devices ) {
-    print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
-      $_ . ': not a suitable device'
-      unless (
-	      /^(
-		 dvi|
-		 html|
-		 xhtml|
-		 lbp|
-		 lj4|
-		 ps|
-		 pdf|
-		 ascii|
-		 cp1047|
-		 latin1|
-		 utf8
-	       )$/x );
-  }
-
+  for my $d ( @devices ) {
+    if ( $d =~			# suitable devices
+	 /^(
+	    dvi|
+	    html|
+	    xhtml|
+	    lbp|
+	    lj4|
+	    ps|
+	    pdf|
+	    ascii|
+	    cp1047|
+	    latin1|
+	    utf8
+	  )$/x ) {
 ###### make_groff_device()
-  my $device = pop( @devices );
-  if ( @devices ) {
-    for ( @devices ) {
-      next if ( $_ eq $device );
+      if ( $device ) {
+	next if ( $device eq $d );
+	print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
+	  'several different devices given: ' .
+	    $device . ' and ' .$d;
+	$device = $d;	# the last provided device is taken
+	next;
+      } else { # empty $device
+	$device = $d;
+	next;
+      }
+    } else {		# not suitable device
       print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
-	'additional device: ' . $_;
+	'not a suitable device for groff: ' . $d;
+      next;
     }
-    print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
-      'device ' . $device . ' taken instead';
-  }
 
-  return '' unless ( $device );
-  push @Command, '-T';
-  push @Command, $device;
+    if ( $device ) {
+      push @Command, '-T';
+      push @Command, $device;
+    }
+  }
 
 ###### make_groff_device()
   if ( $device eq 'pdf' ) {
@@ -987,7 +1021,7 @@ sub make_groff_tmac_man_ms {
 
   # `man' requests, not from `ms'
   if ( $Groff{'SS'} || $Groff{'SY'} || $Groff{'OP'} ||
-       $Groff{'TH'} || $Groff{'TP'} || $Groff{'UR'} ) {
+       $Groff{'TH_first'} || $Groff{'TP'} || $Groff{'UR'} ) {
     $Groff{'man'} = 1;
     push(@m, '-man');
 
@@ -1004,7 +1038,8 @@ sub make_groff_tmac_man_ms {
       $Groff{'1C'} || $Groff{'2C'} ||
       $Groff{'AB'} || $Groff{'AE'} || $Groff{'AI'} || $Groff{'AU'} ||
       $Groff{'BX'} || $Groff{'CD'} || $Groff{'DA'} || $Groff{'DE'} ||
-      $Groff{'DS'} || $Groff{'LD'} || $Groff{'ID'} || $Groff{'NH'} ||
+      $Groff{'DS'} || $Groff{'ID'} || $Groff{'LD'} || $Groff{'NH'} ||
+      $Groff{'TH_later'} ||
       $Groff{'TL'} || $Groff{'UL'} || $Groff{'XP'}
      ) {
     $Groff{'ms'} = 1;
