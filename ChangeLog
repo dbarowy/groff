@@ -1,15 +1,17 @@
 2015-07-19  Bernd Warken  <groff-bernd.warken-72@web.de>
 
-        * src/roff/grog/*.pl: Add last update.
+	* src/roff/grog/*.pl: Add last update.
 
-        * src/roff/grog/subs.pl: Remove call to Perl INC::System::Simple,
-	use backticks instead.  Define &err().  Reorder some extensions.
+	* src/roff/grog/subs.pl: Remove call to Perl INC::System::Simple,
+	use backticks instead.
+	Define &err().
+	Reorder some extensions.
 	Distinguish between .TH at first command for man and later on for
 	ms.
 
 2015-07-01 Peter Bray <pdb_ml@yahoo.com.au>
 
-	Fix Savannah bug #44784
+	Fix Savannah bug #44784.
 
 	Compatibility Mode rendering of groff manual pages
 
