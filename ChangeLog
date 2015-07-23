@@ -1,3 +1,8 @@
+2015-07-23  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* man/groff.man: Add last update.  Add link on Wikipedia on groff.
+	Add link of groff tutorial by Laha.
+
 2015-07-19  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* src/roff/grog/*.pl: Add last update.
