@@ -5170,15 +5170,16 @@ y\R'#DESCENDER \\n[.cdp]'
 .\" See if ELEMENT is of the form HDRFTR_<pos>_<param>
 .       substring hdrftr-pos-element 0 7
 .       substring hdrftr-pos-element -1
-.       if '\\*[hdrftr-pos-element]'L' .nr hdrftr-pos-element 1
-.       if '\\*[hdrftr-pos-element]'C' .nr hdrftr-pos-element 1
-.       if '\\*[hdrftr-pos-element]'R' .nr hdrftr-pos-element 1
+.       if !'\\*[ELEMENT]'HDRFTR_COLOR' \{\
+.          if '\\*[hdrftr-pos-element]'L' .nr hdrftr-pos-element 1
+.          if '\\*[hdrftr-pos-element]'C' .nr hdrftr-pos-element 1
+.          if '\\*[hdrftr-pos-element]'R' .nr hdrftr-pos-element 1
+.       \}
 .    \}
 .    if !\\n[hdrftr-pos-element] \{\
 .       ds c1-c5 \\*[ELEMENT]
 .       substring c1-c5 0 4  \" Grab first five letters of the alias
 .    \}
-.    rr hdrftr-pos-element
 .\"  If none of the following, convert the substring of the
 .\"  calling alias, ie \*[ELEMENT], into the parameter string, eg
 .\"  $TITLE_FAM, assign arg, and set register.
@@ -5208,6 +5209,15 @@ y\R'#DESCENDER \\n[.cdp]'
 .       if '\\*[c1-c5]'LINEN' .ASSIGN_PARAM LN_       \\$1
 .       if '\\*[c1-c5]'PAGEN' .ASSIGN_PARAM PAGE_NUM_ \\$1
 .    \}
+.    if \\n[hdrftr-pos-element] \{\
+.       if '\\*[hdrftr-pos-element]'L' .ds hdrftr-pos-element LEFT
+.       if '\\*[hdrftr-pos-element]'C' .ds hdrftr-pos-element CENTER
+.       if '\\*[hdrftr-pos-element]'R' .ds hdrftr-pos-element RIGHT
+.       if '\\*[ELEMENT]'HDRFTR_\\*[hdrftr-pos-element]_FAM' \
+.          ds $HDRFTR_\\*[hdrftr-pos-element]_FAM \\$1
+.    \}
+.    rr hdrftr-pos-element
+.    rm hdrftr-pos-element
 .END
 \#
 .MAC ASSIGN_PARAM END
@@ -5234,17 +5244,34 @@ y\R'#DESCENDER \\n[.cdp]'
 .    if '\\$1'EPI_' .rm ELEMENT
 .    if '\\$1'FN_'  .rm ELEMENT
 .    if '\\$1'HDRFTR_' \{\
-.       ie '\\*[ELEMENT]'HDRFTR_FAM' \{\
+.       if '\\*[ELEMENT]'HDRFTR_FAM' \{\
 .          nr #HDRFTR 1
 .          ds $HDRFTR_FAM        \\$2
 .          ds $HDRFTR_LEFT_FAM   \\$2
 .          ds $HDRFTR_CENTER_FAM \\$2
 .          ds $HDRFTR_RIGHT_FAM  \\$2
 .       \}
-.       el \{\
+.       if '\\*[ELEMENT]'HDRFTR_COLOR' \{\
+.          nr #HDRFTR 1
+.          nr #HDRFTR_COLOR 1
+.          ds $HDRFTR_COLOR \\$2
+.       \}
+.       if '\\*[ELEMENT]'HDRFTR_SIZE_CHANGE' \{\
+.          nr #HDRFTR 1
+.          ds $HDRFTR_SIZE_CHANGE \\$2
+.       \}
+.       if '\\*[PARAM]'SIZE_CHANGE' \{\
+.          nr #HDRFTR 1
+.          if '\\*[hdrftr-pos-element]'L' \
+.             ds $HDRFTR_LEFT_SIZE_CHANGE \\$2
+.          if '\\*[hdrftr-pos-element]'C' \
+.             ds $HDRFTR_CENTER_SIZE_CHANGE \\$2
+.          if '\\*[hdrftr-pos-element]'R' \
+.             ds $HDRFTR_RIGHT_SIZE_CHANGE \\$2
+.       \}
+.       if !r #HDRFTR \{\
 .          substring ELEMENT 7 \\n[substr-index]
-.          if '\\*[ELEMENT]'_LEFT' \
-.             ds ELEMENT _STRING_
+.          if '\\*[ELEMENT]'_LEFT' .ds ELEMENT _STRING_
 .       \}
 .    \}
 .    if '\\$1'LN_'       .rm ELEMENT

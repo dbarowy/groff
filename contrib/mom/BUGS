@@ -22,8 +22,16 @@ Also, please--no html email.  That, too, gets nuked.
 
 ====================================================================
 
+Version 2.1-a
+=============
+
+Some part-by-part formatting changes to headers not being recognized
+when global header options have been invoked.
+---Fixed---
+
 Version 2.1
 ===========
+
 UNDERSCORE adding an extra space after underlined text.
 ---Fixed---
 
