@@ -12,7 +12,9 @@ grog \(em guess options for a following groff command
 .\" --------------------------------------------------------------------
 .
 .de co
-Copyright \(co 1989-2014 Free Software Foundation, Inc.
+Copyright \(co 1989-2015 Free Software Foundation, Inc.
+
+Last update: 29 Jul 2015
 
 This file is part of grog, which is part of groff, a free software
 project.  You can redistribute it and/or modify it under the terms of
@@ -64,10 +66,12 @@ Bernd Warken
 .
 .SY grog
 .OP \-C
+.OP \-T device
 .OP \-\-run
 .OP \-\-warnings
 .OP \-\-ligatures
-.OP \& "\%groff\-option \*(EL"
+.OP \& "\%groff\-option no arg"
+.OP \& "\%groff\-option with arg \*(EL"
 .OP \-\-
 .OP \& "\%filespec \*(EL"
 .YS
@@ -89,8 +93,12 @@ options are needed to perform the input with the
 .B groff
 program.
 .
+A suitable device is now always written as
+.BI -T device
+including the groff default as
+.BR "-T ps" .
 .
-.RS
+.
 .P
 The corresponding
 .B groff
@@ -102,7 +110,10 @@ the generated line is output into standard error and the generated
 .B groff
 command is run on the
 .IR "standard output" .
-.RE
+.
+.BR groffer (@MAN1EXT@)
+relies on a perfectly running
+.BR groff (@MAN1EXT@).
 .
 .
 .\" --------------------------------------------------------------------

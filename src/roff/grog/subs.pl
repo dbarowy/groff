@@ -12,7 +12,7 @@
 # The macros for identifying the devices were taken from Ralph
 # Corderoy's `grog.sh' of 2006.
 
-# Last update: 19 Jul 2015
+# Last update: 29 Jul 2015
 
 # This file is part of `grog', which is part of `groff'.
 
@@ -58,7 +58,8 @@ my $groff_opts =
 
 my @Command = ();		# stores the final output
 my @Mparams = ();		# stores the options `-m*'
-my @devices = ();
+my @devices = ();		# stores -T
+
 my $do_run = 0;			# run generated `groff' command
 my $pdf_with_ligatures = 0;	# `-P-y -PU' for `pdf' device
 my $with_warnings = 0;
@@ -901,41 +902,31 @@ my $correct_tmac = '';
 sub make_groff_device {
   # globals: @devices
 
-  # default device is empty, i.e. it is `ps' when without `-T'
-  my $device = '';
+  # default device is `ps' when without `-T'
+  my $device;
+  push @devices, 'ps' unless ( @devices );
 
-  for my $d ( @devices ) {
-    if ( $d =~			# suitable devices
-	 /^(
-	    dvi|
-	    html|
-	    xhtml|
-	    lbp|
-	    lj4|
-	    ps|
-	    pdf|
-	    ascii|
-	    cp1047|
-	    latin1|
-	    utf8
-	  )$/x ) {
 ###### make_groff_device()
-      if ( $device ) {
-	next if ( $device eq $d );
-	print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
-	  'several different devices given: ' .
-	    $device . ' and ' .$d;
-	$device = $d;	# the last provided device is taken
-	next;
-      } else { # empty $device
-	$device = $d;
-	next;
-      }
-    } else {		# not suitable device
-      print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
-	'not a suitable device for groff: ' . $d;
+  for my $d ( @devices ) {
+    if ( $d =~ /^(		# suitable devices
+		  dvi|
+		  html|
+		  xhtml|
+		  lbp|
+		  lj4|
+		  ps|
+		  pdf|
+		  ascii|
+		  cp1047|
+		  latin1|
+		  utf8
+		)$/x ) {
+###### make_groff_device()
+      $device = $d;
+    } else {
       next;
     }
+
 
     if ( $device ) {
       push @Command, '-T';

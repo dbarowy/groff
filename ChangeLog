@@ -1,3 +1,10 @@
+2015-07-29  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* src/roff/grog/subs.pl: Add -T for all `grog' output, also using
+	-Tps when no option -T is given in the arguments.
+
+	* src/roff/grog/grog.man: Add information about -T output.
+
 2015-07-23  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* man/groff.man: Add last update.  Add link on Wikipedia on groff.
