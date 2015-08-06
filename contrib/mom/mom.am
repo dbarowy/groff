@@ -1,7 +1,9 @@
-# Copyright (C) 2002-2014
+# Copyright (C) 2002-2015
 #   Free Software Foundation, Inc.
 #      Written by Werner Lemberg (wl@gnu.org)
 #      Automake migration by Bertrand Garrigues
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -166,3 +168,10 @@ uninstall_mom:
 	if test -d $(DESTDIR)$(htmldocdir)/mom; then \
 	  rmdir $(DESTDIR)$(htmldocdir)/mom; \
 	fi
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

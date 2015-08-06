@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -59,3 +61,10 @@ src/roff/troff/majorminor.cpp: $(top_srcdir)/VERSION $(top_srcdir)/REVISION
 	   \"`sed -e 's/^[^.]*\.\([0-9]*\).*$$/\1/' $(top_srcdir)/VERSION`\"\; \
 	   >>$@
 	@echo const char \*revision = \"`cat $(top_srcdir)/REVISION`\"\; >>$@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

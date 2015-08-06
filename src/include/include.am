@@ -2,7 +2,9 @@
 #
 # File position: <groff-source>/src/include/include.am
 #
-# Copyright (C) 2014  Free Software Foundation, Inc.
+# Copyright (C) 2014-15  Free Software Foundation, Inc.
+#
+# Latest update: 5 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -40,3 +42,10 @@ dist-hook: dist_include
 dist_include:
 	chmod u+w $(distdir)/src/include
 	cp -f $(top_srcdir)/src/include/*.h $(distdir)/src/include
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

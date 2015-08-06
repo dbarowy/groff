@@ -1,7 +1,9 @@
-# Copyright (C) 2005-2014
+# Copyright (C) 2005-2015
 # Free Software Foundation, Inc.
 #      Written by Keith Marshall (keith.d.marshall@ntlworld.com)
 #      Automake migration by Bertrand Garrigues
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -91,3 +93,10 @@ if BUILD_PDFDOC
 	  rmdir $(DESTDIR)$(pdfmarkpdfdocdir); \
 	fi
 endif
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

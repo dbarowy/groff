@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -26,3 +28,10 @@ xtotroff_LDADD = libxutil.a libgroff.a $(X_LIBS) $(X_PRE_LIBS) \
 xtotroff_CPPFLAGS = $(AM_CPPFLAGS) $(X_CFLAGS)
 endif
 EXTRA_DIST += src/utils/xtotroff/xtotroff.man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

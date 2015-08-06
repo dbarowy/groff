@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -40,3 +42,10 @@ devX7512fontdir = $(fontdir)/devX75-12
 devX7512font_DATA = $(DEVX7512FONTS)
 endif
 EXTRA_DIST += $(DEVX7512FONTS)
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

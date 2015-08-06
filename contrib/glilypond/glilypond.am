@@ -2,11 +2,13 @@
 
 # File position: <groff-source>/contrib/lilypond/glilypond.am
 
-# Copyright (C) 2013-2014
+# Copyright (C) 2013-2015
 #   Free Software Foundation, Inc.
 # Written by Werner Lemberg <wl@gnu.org> and
 # Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
+
+# Last update: 5 Aug 2015
 
 # This file is part of `glilypond' which is part of `groff'.
 
@@ -61,3 +63,10 @@ uninstall-glilypond-hook:
 	if test -d $(DESTDIR)$(glilyponddir); then \
 	  rmdir $(DESTDIR)$(glilyponddir); \
 	fi
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -102,3 +104,10 @@ fonts: devlj4_fonts
 devlj4_fonts: hpftodit font/devlj4/DESC
 	$(MAKE) -f $(devlj4_srcdir)/generate/Makefile \
 	  srcdir=$(devlj4_srcdir)/generate HPFTODIT=$(top_builddir)/hpftodit
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -40,3 +42,10 @@ EXTRA_DIST += \
 BUILT_SOURCES += man
 man:
 	$(MKDIR_P) $(top_builddir)/man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

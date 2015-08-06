@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Last update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -32,3 +34,10 @@ post_grohtml_LDADD = $(LIBM) \
   lib/libgnu.a 
 man1_MANS += src/devices/grohtml/grohtml.n
 EXTRA_DIST += src/devices/grohtml/grohtml.man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

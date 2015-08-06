@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -42,3 +44,10 @@ bin_SCRIPTS += $(WINSCRIPTS)
 else
 EXTRA_DIST += $(WINSCRIPTS)
 endif
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

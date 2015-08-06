@@ -2,9 +2,12 @@
 #
 # File position: <groff-source>/contrib/gdiffmk/gdiffmk.am
 #
-# Copyright (C) 2004, 2006, 2009, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2004, 2006, 2009, 2014-15
+#    Free Software Foundation, Inc.
 # Written by Mike Bianchi <MBianchi@Foveal.com <mailto:MBianchi@Foveal.com>>
 # Automake migration by Bertrand Garrigues
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of the gdiffmk utility, which is part of groff.
 #
@@ -59,3 +62,10 @@ clean_gdiffmk_check:
 	  cd $(top_builddir)/contrib/gdiffmk/tests && \
 	  $(abs_top_srcdir)/contrib/gdiffmk/tests/runtests.sh clean; \
 	fi
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -21,3 +23,10 @@ PREFIXMAN1 += src/utils/lookbib/lookbib.n
 EXTRA_DIST += src/utils/lookbib/lookbib.man
 lookbib_LDADD = libbib.a libgroff.a $(LIBM)
 lookbib_SOURCES = src/utils/lookbib/lookbib.cpp
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

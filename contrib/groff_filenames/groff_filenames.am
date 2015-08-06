@@ -2,8 +2,10 @@
 
 # File position: <groff-source>/contrib/groff_filenames/groff_filenames.am
 
-# Copyright (C) 2013-2014  Free Software Foundation, Inc.
-#
+# Copyright (C) 2013-2015  Free Software Foundation, Inc.
+
+# Last update: 5 Aug 2015
+
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
 
@@ -28,3 +30,10 @@ man7_MANS += contrib/groff_filenames/groff_filenames.n
 EXTRA_DIST += \
   contrib/groff_filenames/ChangeLog \
   contrib/groff_filenames/groff_filenames.man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

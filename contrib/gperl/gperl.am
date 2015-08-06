@@ -2,9 +2,11 @@
 
 # File position: <groff-source>/contrib/gperl/gperl.am
 
-# Copyright (C) 2014  Free Software Foundation, Inc.
+# Copyright (C) 2014-15  Free Software Foundation, Inc.
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
+
+# Last update: 5 Aug 2015
 
 # This file is part of `gperl' which is part of `groff'.
 
@@ -40,3 +42,9 @@ gperl: $(top_srcdir)/contrib/gperl/gperl.pl shdeps.sed
 	     $(top_srcdir)/contrib/gperl/gperl.pl >$@; \
 	chmod +x $@
 
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -2,7 +2,9 @@
 #
 # File position: <groff-source>/src/utils/afmtodit/afmtdodit.am
 #
-# Copyright (C) 2013-2014  Free Software Foundation, Inc.
+# Copyright (C) 2013-2015  Free Software Foundation, Inc.
+#
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -47,3 +49,10 @@ afmtodit: $(afmtodit_srcdir)/afmtodit.pl $(afmtodit_srcdir)/afmtodit.tables
 	      $(afmtodit_srcdir)/afmtodit.pl >afmtodit; \
 	fi
 	chmod +x afmtodit
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -2,7 +2,9 @@
 #
 # File position: <groff-source>/src/utils/hpftodit/hpftodit.am
 #
-# Copyright (C) 2014  Free Software Foundation, Inc.
+# Copyright (C) 2014-2015  Free Software Foundation, Inc.
+#
+# Latest update: 5 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -27,3 +29,10 @@ hpftodit_LDADD = libgroff.a $(LIBM)
 hpftodit_SOURCES = \
   src/utils/hpftodit/hpftodit.cpp \
   src/utils/hpftodit/hpuni.cpp
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

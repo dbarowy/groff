@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -88,3 +90,10 @@ font/devdvi/DESC: $(devdvi_srcdir)/DESC.in
 	  echo "papersize letter" >>$@; \
 	fi
 	@test -z '$(DVIPRINT)' || echo print '$(DVIPRINT)' >>$@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

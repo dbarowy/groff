@@ -1,8 +1,10 @@
-# Copyright (C) 2011-2014
+# Copyright (C) 2011-2015
 #      Free Software Foundation, Inc.
 #  Original Makefile.sub written by Deri James <deri@chuzzlewit.demon.co.uk>.
 #  Automake migration by Bertrand Garrigues
-# 
+#
+# Last update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -48,3 +50,10 @@ pdfmom: $(gropdf_dir)/pdfmom.pl $(SH_DEPS_SED_SCRIPT)
 	    -e "s|[@]RT_SEP[@]|$(RT_SEP)|" \
 	    -e "s|[@]PERL[@]|$(PERL)|" $(gropdf_dir)/pdfmom.pl >$@
 	chmod +x $@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

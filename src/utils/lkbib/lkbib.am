@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -22,3 +24,10 @@ EXTRA_DIST += src/utils/lkbib/lkbib.man
 lkbib_LDADD = libbib.a libgroff.a $(LIBM)
 lkbib_SOURCES = src/utils/lkbib/lkbib.cpp
 src/utils/lkbib/lkbib.$(OBJEXT): defs.h
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

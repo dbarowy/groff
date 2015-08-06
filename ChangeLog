@@ -1,3 +1,36 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* Makefile.am, arch/mingw/mingw.am, arch/misc/misc.am,
+	* contrib/eqn2graph/eqn2graph.am, contrib/grap2graph/grap2graph,
+	* contrib/pic2graph/pic2graph.am, doc/doc.am,
+	* font/devX100/devX100.am, font/devX100-12/devX100-12.am,
+	* font/devX75/devX75.am, font/devX75-12/devX75-12.am,
+	* font/devascii/devascii.am, font/devcp1047/devcp1047.am,
+	* font/devdvi/devdvi.am, font/devhtml/devhtml.am,
+	* font/devlatin1/devlatin1.am, font/devlbp/devlbp.am,
+	* font/devlj4/devlj4.am, font/devpdf/devpdf.am,
+	* font/devps/devps.am, font/devutf8/devutf8.am,
+	* font/scripts/scripts.am, man/man.am,
+	* src/devices/grodvi/grodvi.am, src/devices/grohtml/grohtml.am,
+	* src/devices/grolbp/grolbp.am, src/devices/grolj4/grolj4.am,
+	* src/devices/gropdf/gropdf.am, src/devices/grops/grops.am,
+	* src/devices/grotty/grotty.am,
+	* src/include/include.am, src/libs/libbib/libbib.am,
+	* src/libs/libdriver/libdriver.am, src/libs/libgroff/libgroff.am,
+	* src/libs/libxutil/libxutil.am, src/preproc/grn/grn.am,
+	* src/preproc/html/html.am, src/preproc/pic/pic.am,
+	* src/preproc/preconv/preconv.am, src/preproc/tbl/tbl.am
+	* src/preproc/refer/refer.am, src/preproc/soelim/soelim.am,
+	* src/roff/groff/groff.am, src/roff/grog/grog.am,
+	* src/roff/nroff/nroff.am, src/roff/troff/troff.am,
+	* src/utils/addftinfo/addftinfo.am,
+	* src/utils/afmtodit/afmtodit.am, src/utils/hpftodit/hpftodit.am,
+	* src/utils/indxbib/indxbib.am, src/utils/lkbib/lkbib.am,
+	* src/utils/lookbib/lookbib.am, src/utils/pfbtops/pfbtops.am,
+	* src/utils/tfmtodit/tfmtodit.am, src/utils/xtotroff/xtotroff.am,
+	* tmac/tmac.am:
+	Add `Last update'.  Setup Emacs mode.
+
 2015-07-29  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* src/roff/grog/subs.pl: Add -T for all `grog' output, also using

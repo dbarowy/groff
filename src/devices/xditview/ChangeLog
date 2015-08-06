@@ -1,3 +1,7 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* xditview.am: Add `Last update'.  Setup Emacs mode.
+
 2004-05-29  Werner LEMBERG  <wl@gnu.org>
 
 	gxditview and xtotroff have been integrated into the normal groff
@@ -541,7 +545,9 @@ Sun May 26 14:14:01 1991  James Clark  (jjc at jclark)
 
 	* Started separate ChangeLog.
 
-Copyright 1991-1995, 1999, 200, 2001, 2002, 2003, 2004
+________________________________________________________________________
+
+Copyright 1991-1995, 1999-2004
   Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
@@ -550,5 +556,6 @@ notice and this notice are preserved.
 
 Local Variables:
 version-control: never
+mode: change-log
 coding: latin-1
 End:

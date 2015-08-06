@@ -1,5 +1,7 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -44,3 +46,10 @@ font/devascii/DESC: $(devascii_srcdir)/DESC.proto
 	$(MKDIR_P) `dirname $@`
 	$(SHELL) $(GENDESCSH) $(devascii_srcdir)/DESC.proto \
 	  $(DEVASCIIRES) $(DEVASCIICPI) $(DEVASCIILPI) $(DEVASCIIFONTS) > $@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

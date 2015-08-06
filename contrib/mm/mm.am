@@ -1,5 +1,7 @@
-# Copyright 1991-2014
+# Copyright 1991-2015
 #   Free Software Foundation, Inc.
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -104,3 +106,10 @@ dist_mm:
 	for i in $(mm_srcdir)/*.tmac; do \
 	  cp -f $$i $(distdir)/contrib/mm/; \
 	done
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

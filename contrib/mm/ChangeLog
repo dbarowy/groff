@@ -1,3 +1,7 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* mm.am, Makefile.sim: Add `Last update'.  Setup Emacs mode.
+
 Thu Jul 16 11:52:03 2015  Carsten Kunze  <carsten.kunze@arcor.de>
 
 	Fix line length of `.DS' with indentation (#45452).
@@ -966,7 +970,9 @@ Sun Jan 1 00:00:00 1991 Joergen Haegg (jh at efd.lth.se)
 	* TP&PX	supported
 	* warnings for unimplemented macros
 
-Copyright 1991-2007, 2009-2014
+________________________________________________________________________
+
+Copyright 1991-2007, 2009-2015
   Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
@@ -975,5 +981,5 @@ notice and this notice are preserved.
 
 Local Variables:
 version-control: never
-coding: latin-1
+mode: change-log
 End:

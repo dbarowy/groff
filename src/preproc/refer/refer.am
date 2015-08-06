@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -42,3 +44,9 @@ src/preproc/refer/refer-refer.$(OBJEXT): defs.h
 src/preproc/refer/refer-token.$(OBJEXT): defs.h
 src/preproc/refer/refer-label.$(OBJEXT): defs.h
 
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

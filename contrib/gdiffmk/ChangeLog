@@ -1,3 +1,7 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gdiffmk.am: Add `Last update'.  Setup Emacs mode.
+
 2015-04-13  Mike Bianchi <MBianchi@Foveal.com>
 	More fixes to Savannah bug #44768.
 
@@ -154,5 +158,6 @@ notice and this notice are preserved.
 
 Local Variables:
 version-control: never
+mode: change-log
 coding: latin-1
 End:

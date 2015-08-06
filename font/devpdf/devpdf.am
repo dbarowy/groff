@@ -1,8 +1,10 @@
-# Copyright (C) 2011-2014 Free Software Foundation, Inc.
+# Copyright (C) 2011-2015 Free Software Foundation, Inc.
 #      Free Software Foundation, Inc.
 #      Original Makefile.sub Written 
 #      by Deri James <deri@chuzzlewit.demon.co.uk>
 #      Automake migration by Bertrand Garrigues
+#
+# Last update: 2015
 #
 # This file is part of groff.
 #
@@ -165,3 +167,10 @@ uninstall_devpdf:
 	  rm -f $(DESTDIR)$(devpdffontdir)/download; \
 	  rmdir $(DESTDIR)$(devpdffontdir); \
 	fi
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

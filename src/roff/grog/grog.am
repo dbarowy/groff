@@ -2,8 +2,10 @@
 #
 # File position: <groff-source>/src/roff/grog/grog.am
 #
-# Copyright (C) 1993-2014
+# Copyright (C) 1993-2015
 #   Free Software Foundation, Inc.
+#
+# Latest update: 5 Aug 2015
 #
 # This file is part of `grog' which is part of `groff'.
 #
@@ -47,3 +49,10 @@ grog: $(grog_srcdir)/grog.pl $(GROG) $(SH_DEPS_SED_SCRIPT)
 	    -e "$(SH_SCRIPT_SED_CMD)" \
 	    $(grog_srcdir)/grog.pl >$@
 	chmod +x $@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

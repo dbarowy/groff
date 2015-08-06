@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -23,3 +25,10 @@ PREFIXMAN1 += src/preproc/soelim/soelim.n
 EXTRA_DIST += \
   src/preproc/soelim/TODO \
   src/preproc/soelim/soelim.man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

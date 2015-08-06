@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Latest update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -24,3 +26,10 @@ tbl_SOURCES = \
   src/preproc/tbl/table.h
 PREFIXMAN1 += src/preproc/tbl/tbl.n
 EXTRA_DIST += src/preproc/tbl/tbl.man
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -1,7 +1,9 @@
-# Copyright (C) 2002-2014  Free Software Foundation, Inc.
+# Copyright (C) 2002-2015  Free Software Foundation, Inc.
 #      Original Makefile.sub written by Werner Lemberg <wl@gnu.org>
 #      Automake migration by 
 #      Bertrand Garrigues <bertrand.garrigues@laposte.net>
+#
+# LAst update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -438,3 +440,10 @@ dist-hook: dist-gnueps
 dist-gnueps:
 	chmod u+w $(distdir)/doc
 	cp -f gnu.eps $(distdir)/doc
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

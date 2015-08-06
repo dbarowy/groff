@@ -1,3 +1,7 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* groffer.am: Add `Last update'.  Setup Emacs mode.
+
 2015-04-04  Werner LEMBERG  <wl@gnu.org>
 
 	* roff2.man (EL): Fix typo.
@@ -509,7 +513,7 @@
 ________________________________________________________________
 License
 
-Copyright (C) 2006-2009, 2011-2014
+Copyright (C) 2006-2009, 2011-2015
 	Free Software Foundation, Inc.
 Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 

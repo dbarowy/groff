@@ -1,6 +1,8 @@
-# Copyright (C) 2014
+# Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
-# 
+#
+# Last update: 5 Aug 2015
+#
 # This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
@@ -26,3 +28,8 @@ man1_MANS += src/devices/grodvi/grodvi.n
 EXTRA_DIST += src/devices/grodvi/grodvi.man
 
 
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

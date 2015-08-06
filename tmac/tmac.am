@@ -1,7 +1,9 @@
-# Copyright (C) 1989-2007, 2009-2012, 2014
+# Copyright (C) 1989-2007, 2009-2012, 2014-2015
 #   Free Software Foundation, Inc.
 #      Written by James Clark (jjc@jclark.com)
 #      Automake migration by Bertrand Garrigues
+#
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -248,3 +250,10 @@ uninstall_tmac_hook:
 	if test -d $(DESTDIR)$(localtmacdir); then \
 	  rmdir $(DESTDIR)$(localtmacdir); \
 	fi
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.

@@ -1,3 +1,7 @@
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* mom.am: Add `Last update'.  Setup Emacs mode.
+
 * Sun Jul 26 2015
 
 	o Fix to header part-by-part changes.
@@ -1594,7 +1598,7 @@ ________________________________________________________________________
 
 ##### License
 
-Copyright 2004-2014  Free Software Foundation, Inc.
+Copyright 2004-2015  Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,
 are permitted in any medium without royalty provided the copyright

@@ -1,7 +1,8 @@
-# # Copyright (C) 1989-2014 Free Software Foundation, Inc.
-#   Free Software Foundation, Inc.
-#      Original Makefile.in written by James Clark (jjc@jclark.com)
-#      Migrated to Automake by Bertrand Garrigues
+# Copyright (C) 1989-2015 Free Software Foundation, Inc.
+# Original Makefile.in written by James Clark (jjc@jclark.com)
+# Migrated to Automake by Bertrand Garrigues
+#
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -892,3 +893,10 @@ MOSTLYCLEANFILES += $(prefixexecbin_SCRIPTS) $(bin_SCRIPTS) \
 	     -e "s|[@]TMAC_S_PREFIX[@]|$(tmac_s_prefix)|g" \
 	     -e "s|[@]VERSION[@]|$(VERSION)|g" \
 	 $< >$@
+
+
+########################################################################
+### Emacs settings
+# Local Variables:
+# mode: makefile-automake
+# End.
