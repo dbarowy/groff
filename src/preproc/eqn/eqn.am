@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 5 Aug 2015
+# Latest update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -45,12 +45,12 @@ eqn_SOURCES = \
   src/preproc/eqn/pbox.h \
   src/preproc/eqn/eqn.h
 
-PREFIXMAN1 += src/preproc/eqn/eqn.n src/preproc/eqn/neqn.n
+PREFIXMAN1 += src/preproc/eqn/eqn.1.n src/preproc/eqn/neqn.1.n
 EXTRA_DIST += \
   src/preproc/eqn/TODO \
   src/preproc/eqn/neqn.sh \
-  src/preproc/eqn/eqn.man \
-  src/preproc/eqn/neqn.man
+  src/preproc/eqn/eqn.1.man \
+  src/preproc/eqn/neqn.1.man
 
 src/preproc/eqn/eqn-lex.$(OBJEXT): src/preproc/eqn/eqn.hpp
 CLEANFILES += \

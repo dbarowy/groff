@@ -1,3 +1,15 @@
+2015-08-07  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	Add section name to all man-page names.
+
+	* Makefile.am: In `install-prefix-man' and `uninstall-prefix-man'
+	change `sed' commands.  Correct saving in man[157]_MANS.
+
+	* all *.man in source tree: Rename `manpage.man' to
+	`manpage.[157].man'.
+
+	* all makefile.am in source tree: Add new man-page file name.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* Makefile.am, arch/mingw/mingw.am, arch/misc/misc.am,

@@ -4,7 +4,7 @@
 
 # Copyright (C) 2013-2015  Free Software Foundation, Inc.
 
-# Last update: 5 Aug 2015
+# Last update: 7 Aug 2015
 
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
@@ -26,10 +26,10 @@
 
 ########################################################################
 
-man7_MANS += contrib/groff_filenames/groff_filenames.n
+man7_MANS += contrib/groff_filenames/groff_filenames.7.n
 EXTRA_DIST += \
   contrib/groff_filenames/ChangeLog \
-  contrib/groff_filenames/groff_filenames.man
+  contrib/groff_filenames/groff_filenames.7.man
 
 
 ########################################################################

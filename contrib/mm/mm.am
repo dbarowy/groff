@@ -1,7 +1,7 @@
 # Copyright 1991-2015
 #   Free Software Foundation, Inc.
 #
-# Last update: 5 Aug 2015
+# Last update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -26,10 +26,10 @@ mm_builddir = $(top_builddir)/contrib/mm
 
 bin_SCRIPTS += mmroff
 
-man1_MANS += contrib/mm/mmroff.n
+man1_MANS += contrib/mm/mmroff.1.n
 man7_MANS += \
-  contrib/mm/groff_mm.n \
-  contrib/mm/groff_mmse.n
+  contrib/mm/groff_mm.7.n \
+  contrib/mm/groff_mmse.7.n
 
 # Files installed in $(tmacdir)/mm
 MMFILES = \
@@ -57,9 +57,9 @@ EXTRA_DIST += \
   contrib/mm/mm \
   contrib/mm/NOTES \
   contrib/mm/README \
-  contrib/mm/groff_mm.man \
-  contrib/mm/groff_mmse.man \
-  contrib/mm/mmroff.man \
+  contrib/mm/groff_mm.7.man \
+  contrib/mm/groff_mmse.7.man \
+  contrib/mm/mmroff.1.man \
   contrib/mm/mmroff.pl
 
 mmroff: $(mm_srcdir)/mmroff.pl

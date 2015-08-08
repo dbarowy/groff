@@ -8,7 +8,7 @@
 #   Automake migration by 
 #   Bertrand Garrigues <bertrand.garrigues@laposte.net>
 #
-# Latest update: 5 Aug 2015
+# Latest update: 7 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -35,8 +35,8 @@ groff_SOURCES = \
   src/roff/groff/pipeline.c \
   src/roff/groff/pipeline.h
 src/roff/groff/groff.$(OBJEXT): defs.h
-man1_MANS += src/roff/groff/groff.n
-EXTRA_DIST += src/roff/groff/groff.man
+man1_MANS += src/roff/groff/groff.1.n
+EXTRA_DIST += src/roff/groff/groff.1.man
 GROFF_OPTS_OUTPUT = \
   groff_opts_no_arg.txt \
   groff_opts_with_arg.txt

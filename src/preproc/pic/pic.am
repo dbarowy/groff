@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 5 Aug 2015
+# Latest update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -38,11 +38,11 @@ pic_SOURCES = \
 pic_CPPFLAGS = $(AM_CPPFLAGS) \
   -I $(top_srcdir)/src/preproc/pic \
   -I $(top_builddir)/src/preproc/pic
-PREFIXMAN1 += src/preproc/pic/pic.n
+PREFIXMAN1 += src/preproc/pic/pic.1.n
 
 src/preproc/pic/pic-lex.$(OBJEXT): src/preproc/pic/pic.hpp
 EXTRA_DIST += \
-  src/preproc/pic/pic.man \
+  src/preproc/pic/pic.1.man \
   src/preproc/pic/TODO
 CLEANFILES += \
   src/preproc/pic/pic.cpp \

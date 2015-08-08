@@ -1,5 +1,9 @@
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
+	* groff_hdtbl.7.man,  hdtbl.am: Rename groff_hdtbl.man.
+
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
 	* hdtbl.am: Add `Last update'.  Setup Emacs mode.
 
 2015-04-03  Werner LEMBERG  <wl@gnu.org>

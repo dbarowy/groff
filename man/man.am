@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #   Free Software Foundation, Inc.
 #
-# Last update: 5 Aug 2015
+# Last update: 7 Aug 2015
 #
 # This file is part of `groff'
 #
@@ -19,24 +19,24 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 man5_MANS += \
-  man/groff_font.n \
-  man/groff_out.n \
-  man/groff_tmac.n
+  man/groff_font.5.n \
+  man/groff_out.5.n \
+  man/groff_tmac.5.n
 man7_MANS += \
-  man/ditroff.n \
-  man/groff_char.n \
-  man/groff_diff.n \
-  man/groff.n \
-  man/roff.n
+  man/ditroff.7.n \
+  man/groff_char.7.n \
+  man/groff_diff.7.n \
+  man/groff.7.n \
+  man/roff.7.n
 EXTRA_DIST += \
-  man/groff_font.man \
-  man/groff_out.man \
-  man/groff_tmac.man \
-  man/ditroff.man \
-  man/groff_char.man \
-  man/groff_diff.man \
-  man/groff.man \
-  man/roff.man
+  man/groff_font.5.man \
+  man/groff_out.5.man \
+  man/groff_tmac.5.man \
+  man/ditroff.7.man \
+  man/groff_char.7.man \
+  man/groff_diff.7.man \
+  man/groff.7.man \
+  man/roff.7.man
 
 # Case of out-of-source build: we must create the 'man' directory.
 BUILT_SOURCES += man

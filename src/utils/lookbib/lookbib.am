@@ -19,8 +19,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 prefixexecbin_PROGRAMS += lookbib
-PREFIXMAN1 += src/utils/lookbib/lookbib.n
-EXTRA_DIST += src/utils/lookbib/lookbib.man
+PREFIXMAN1 += src/utils/lookbib/lookbib.1.n
+EXTRA_DIST += src/utils/lookbib/lookbib.1.man
 lookbib_LDADD = libbib.a libgroff.a $(LIBM)
 lookbib_SOURCES = src/utils/lookbib/lookbib.cpp
 

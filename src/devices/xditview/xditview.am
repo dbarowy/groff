@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Last update: 5 Aug 2015
+# Last update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -46,7 +46,7 @@ gxditview_SOURCES = $(GXDITVIEWSOURCES)
 nodist_gxditview_SOURCES = $(XDITVIEW_GENHDRS)
 CLEANFILES += $(XDITVIEW_GENHDRS)
 
-man1_MANS += src/devices/xditview/gxditview.n
+man1_MANS += src/devices/xditview/gxditview.1.n
 
 # Because we defined gxditview_CPPFLAGS, automake renames all the xditview's 
 # objects, adding an "gxditview-" prefix. 

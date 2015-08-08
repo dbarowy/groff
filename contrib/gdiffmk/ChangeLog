@@ -1,3 +1,7 @@
+2015-08-07  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gdiffmk.1.man, gdiffmk.am: Rename gdiffmk.man.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* gdiffmk.am: Add `Last update'.  Setup Emacs mode.

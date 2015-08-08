@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 5 Aug 2015
+# Latest update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -21,10 +21,10 @@
 prefixexecbin_PROGRAMS += soelim
 soelim_LDADD = libgroff.a $(LIBM)
 soelim_SOURCES = src/preproc/soelim/soelim.cpp
-PREFIXMAN1 += src/preproc/soelim/soelim.n
+PREFIXMAN1 += src/preproc/soelim/soelim.1.n
 EXTRA_DIST += \
   src/preproc/soelim/TODO \
-  src/preproc/soelim/soelim.man
+  src/preproc/soelim/soelim.1.man
 
 
 ########################################################################

@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 5 Aug 2015
+# Latest update: 7 Aug 2015
 #
 # This file is part of groff.
 #
@@ -27,8 +27,8 @@ grn_SOURCES = \
   src/preproc/grn/gprint.h
 src/preproc/grn/main.$(OBJEXT): defs.h
 grn_LDADD = libgroff.a lib/libgnu.a $(LIBM)
-PREFIXMAN1 += src/preproc/grn/grn.n
-EXTRA_DIST += src/preproc/grn/README src/preproc/grn/grn.man
+PREFIXMAN1 += src/preproc/grn/grn.1.n
+EXTRA_DIST += src/preproc/grn/README src/preproc/grn/grn.1.man
 
 
 ########################################################################
