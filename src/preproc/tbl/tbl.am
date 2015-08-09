@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -24,8 +24,8 @@ tbl_SOURCES = \
   src/preproc/tbl/main.cpp \
   src/preproc/tbl/table.cpp \
   src/preproc/tbl/table.h
-PREFIXMAN1 += src/preproc/tbl/tbl.1.n
-EXTRA_DIST += src/preproc/tbl/tbl.1.man
+PREFIXMAN1 += src/preproc/tbl/tbl.n
+EXTRA_DIST += src/preproc/tbl/tbl.man
 
 
 ########################################################################

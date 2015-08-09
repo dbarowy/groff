@@ -1,7 +1,7 @@
 # Copyright (C) 2002-2014
 #   Free Software Foundation, Inc.
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -23,9 +23,9 @@
 
 eqn2graph_srcdir = $(top_srcdir)/contrib/eqn2graph
 bin_SCRIPTS += eqn2graph
-man1_MANS += contrib/eqn2graph/eqn2graph.1.n
+man1_MANS += contrib/eqn2graph/eqn2graph.n
 EXTRA_DIST += \
-  contrib/eqn2graph/eqn2graph.1.man \
+  contrib/eqn2graph/eqn2graph.man \
   contrib/eqn2graph/eqn2graph.sh
 
 eqn2graph: $(top_srcdir)/contrib/eqn2graph/eqn2graph.sh

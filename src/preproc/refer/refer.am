@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -31,8 +31,8 @@ refer_SOURCES =  \
   src/preproc/refer/ref.h \
   src/preproc/refer/token.h \
   src/preproc/refer/command.h
-PREFIXMAN1 += src/preproc/refer/refer.1.n
-EXTRA_DIST += src/preproc/refer/TODO src/preproc/refer/refer.1.man
+PREFIXMAN1 += src/preproc/refer/refer.n
+EXTRA_DIST += src/preproc/refer/TODO src/preproc/refer/refer.man
 CLEANFILES += \
   src/preproc/refer/label.cpp \
   src/preproc/refer/label.hpp \

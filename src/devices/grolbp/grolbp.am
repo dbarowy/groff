@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -28,8 +28,8 @@ grolbp_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grolbp/grolbp.1.n
-EXTRA_DIST += src/devices/grolbp/grolbp.1.man
+man1_MANS += src/devices/grolbp/grolbp.n
+EXTRA_DIST += src/devices/grolbp/grolbp.man
 
 
 ########################################################################

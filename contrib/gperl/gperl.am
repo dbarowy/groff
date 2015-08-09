@@ -6,7 +6,7 @@
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
 
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 
 # This file is part of `gperl' which is part of `groff'.
 
@@ -27,10 +27,10 @@
 ########################################################################
 
 bin_SCRIPTS += gperl
-man1_MANS += contrib/gperl/gperl.1.n
+man1_MANS += contrib/gperl/gperl.n
 EXTRA_DIST += \
   contrib/gperl/ChangeLog \
-  contrib/gperl/gperl.1.man \
+  contrib/gperl/gperl.man \
   contrib/gperl/gperl.pl
 gperl: $(top_srcdir)/contrib/gperl/gperl.pl shdeps.sed
 	$(RM) $@

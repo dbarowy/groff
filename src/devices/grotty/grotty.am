@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -24,9 +24,9 @@ grotty_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grotty/grotty.1.n
+man1_MANS += src/devices/grotty/grotty.n
 EXTRA_DIST += \
-  src/devices/grotty/grotty.1.man \
+  src/devices/grotty/grotty.man \
   src/devices/grotty/TODO
 
 

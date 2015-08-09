@@ -2,7 +2,7 @@
 # Original Makefile.in written by James Clark (jjc@jclark.com)
 # Migrated to Automake by Bertrand Garrigues
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -708,34 +708,34 @@ if USEPROGRAMPREFIX
 generate_man_files: $(PREFIXMAN1)
 install-prefix-man:
 	for f in $(PREFIXMAN1); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/1/'`; \
 	  cp -f $$f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 	for f in $(PREFIXMAN5); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/5/'`; \
 	  cp -f $$f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 	for f in $(PREFIXMAN7); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/7/'`; \
 	  cp -f $$f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 uninstall-prefix-man:
 	for f in $(PREFIXMAN1); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/1/'`; \
 	  rm -f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 	for f in $(PREFIXMAN5); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/5/'`; \
 	  rm -f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 	for f in $(PREFIXMAN7); do \
-	  manfile_final_name=`basename $$f | sed 's/\.[0-9]\.n$$//'`; \
+	  manfile_final_name=`basename $$f | sed 's/n$$/7/'`; \
 	  rm -f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)$$manfile_final_name; \
 	done
 else
 man1_MANS += $(PREFIXMAN1)
-man5_MANS += $(PREFIXMAN5)
-man7_MANS += $(PREFIXMAN7)
+man1_MANS += $(PREFIXMAN5)
+man1_MANS += $(PREFIXMAN7)
 install-prefix-man:
 uninstall-prefix-man:
 generate_man_files:

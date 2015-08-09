@@ -1,3 +1,7 @@
+2015-08-09  werner LEMBERG  <wl@gnu.org>
+
+	Revert previous commit, since it doesn't work correctly yet.
+
 2015-08-07  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	Add section name to all man-page names.

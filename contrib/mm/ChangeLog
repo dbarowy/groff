@@ -1,9 +1,5 @@
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
-	Rename all man-pages by adding a section number.
-
-2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
-
 	* mm.am, Makefile.sim: Add `Last update'.  Setup Emacs mode.
 
 Thu Jul 16 11:52:03 2015  Carsten Kunze  <carsten.kunze@arcor.de>

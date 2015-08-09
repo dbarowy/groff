@@ -1,7 +1,7 @@
 # Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -19,8 +19,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bin_PROGRAMS += tfmtodit
-man1_MANS += src/utils/tfmtodit/tfmtodit.1.n
-EXTRA_DIST += src/utils/tfmtodit/tfmtodit.1.man
+man1_MANS += src/utils/tfmtodit/tfmtodit.n
+EXTRA_DIST += src/utils/tfmtodit/tfmtodit.man
 tfmtodit_SOURCES = src/utils/tfmtodit/tfmtodit.cpp
 tfmtodit_LDADD = libgroff.a $(LIBM)
 

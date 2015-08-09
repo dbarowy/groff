@@ -2,7 +2,7 @@
 #      Written by Werner Lemberg (wl@gnu.org)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -22,7 +22,7 @@
 hdtbl_srcdir = $(top_srcdir)/contrib/hdtbl
 hdtbl_builddir = $(top_builddir)/contrib/hdtbl
 
-man7_MANS += contrib/hdtbl/groff_hdtbl.7.n
+man7_MANS += contrib/hdtbl/groff_hdtbl.n
 
 # Groff command used to generate .ps files
 HDTBL_TFLAG = -M$(hdtbl_srcdir) -M$(hdtbl_builddir)
@@ -97,7 +97,7 @@ MOSTLYCLEANFILES += $(HDTBLGENFILES) $(HDTBLPROCESSEDEXAMPLEFILES) \
 EXTRA_DIST += \
   contrib/hdtbl/ChangeLog \
   contrib/hdtbl/TODO \
-  contrib/hdtbl/groff_hdtbl.1.man \
+  contrib/hdtbl/groff_hdtbl.man \
   contrib/hdtbl/hdtbl.tmac-u \
   contrib/hdtbl/hdmisc.tmac-u
 
@@ -122,7 +122,7 @@ $(HDTBLSTRIPFILES): $(top_srcdir)/tmac/strip.sed
 	sed -f $(top_srcdir)/tmac/strip.sed $(hdtbl_srcdir)/`basename $@`-u > $@;
 
 uninstall_groffdirs: uninstall-hdtbl-hook
-ninstall-hdtbl-hook:
+uninstall-hdtbl-hook:
 	if test -d $(DESTDIR)$(hdtblexampledir); then \
 	  rmdir $(DESTDIR)$(hdtblexampledir); \
 	fi

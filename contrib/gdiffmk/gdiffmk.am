@@ -28,9 +28,9 @@
 gdiffmk_srcdir = $(top_srcdir)/contrib/gdiffmk
 bin_SCRIPTS += gdiffmk
 TESTS += contrib/gdiffmk/tests/gdiffmk_tests.sh
-man1_MANS += contrib/gdiffmk/gdiffmk.1.n
+man1_MANS += contrib/gdiffmk/gdiffmk.n
 EXTRA_DIST += \
-  contrib/gdiffmk/gdiffmk.1.man \
+  contrib/gdiffmk/gdiffmk.man \
   contrib/gdiffmk/ChangeLog \
   contrib/gdiffmk/README \
   contrib/gdiffmk/gdiffmk.sh \

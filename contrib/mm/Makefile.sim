@@ -1,8 +1,8 @@
 # Copyright 1991-2015  Free Software Foundation, Inc.
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
-# This file is part of hdtbl, which is part of groff.
+# This file is part of groff.
 #
 # groff is free software; you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free
@@ -46,11 +46,11 @@ mdate = 2002-05-11
 
 all:
 
-install: groff_mm.7.n groff_mmse.7.n
+install: groff_mm.n groff_mmse.n
 	$(MAKE) -f Makefile.sub tmacdir=$(tmacdir) srcdir=$(srcdir) \
 	  INSTALL_DATA='$(install)' tmac_m=$(tmac_m) install
 
-uninstall: groff_mm.7.n groff_mmse.7.n
+uninstall: groff_mm.n groff_mmse.n
 	$(MAKE) -f Makefile.sub tmacdir=$(tmacdir) srcdir=$(srcdir) \
 	  INSTALL_DATA='$(install)' tmac_m=$(tmac_m) uninstall_sub
 

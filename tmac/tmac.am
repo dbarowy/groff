@@ -3,7 +3,7 @@
 #      Written by James Clark (jjc@jclark.com)
 #      Automake migration by Bertrand Garrigues
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -23,12 +23,12 @@ tmac_srcdir = $(top_srcdir)/tmac
 tmac_builddir = $(top_builddir)/tmac
 
 man7_MANS += \
-  tmac/groff_ms.7.n \
-  tmac/groff_man.7.n \
-  tmac/groff_me.7.n \
-  tmac/groff_mdoc.7.n \
-  tmac/groff_trace.7.n \
-  tmac/groff_www.7.n
+  tmac/groff_ms.n \
+  tmac/groff_man.n \
+  tmac/groff_me.n \
+  tmac/groff_mdoc.n \
+  tmac/groff_trace.n \
+  tmac/groff_www.n
 
 TMACNORMALFILES = \
   tmac/man.tmac \
@@ -121,12 +121,12 @@ MOSTLYCLEANFILES += $(TMACMDOCFILES) tmac/www.tmac $(TMACSTRIPFILES) \
 
 EXTRA_DIST += \
   tmac/fixmacros.sed \
-  tmac/groff_ms.7.man \
-  tmac/groff_man.7.man \
-  tmac/groff_me.7.man \
-  tmac/groff_mdoc.7.man \
-  tmac/groff_trace.7.man \
-  tmac/groff_www.7.man \
+  tmac/groff_ms.man \
+  tmac/groff_man.man \
+  tmac/groff_me.man \
+  tmac/groff_mdoc.man \
+  tmac/groff_trace.man \
+  tmac/groff_www.man \
   tmac/hyphenex.pl \
   tmac/LOCALIZATION \
   tmac/man.ultrix \

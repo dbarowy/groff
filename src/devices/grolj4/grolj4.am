@@ -24,11 +24,11 @@ grolj4_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grolj4/grolj4.1.n
-man5_MANS += src/devices/grolj4/lj4_font.5.n
+man1_MANS += src/devices/grolj4/grolj4.n
+man5_MANS += src/devices/grolj4/lj4_font.n
 EXTRA_DIST += \
-  src/devices/grolj4/grolj4.1.man \
-  src/devices/grolj4/lj4_font.5.man
+  src/devices/grolj4/grolj4.man \
+  src/devices/grolj4/lj4_font.man
 
 ########################################################################
 ### Emacs settings

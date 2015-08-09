@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -32,8 +32,8 @@ post_grohtml_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a 
-man1_MANS += src/devices/grohtml/grohtml.1.n
-EXTRA_DIST += src/devices/grohtml/grohtml.1.man
+man1_MANS += src/devices/grohtml/grohtml.n
+EXTRA_DIST += src/devices/grohtml/grohtml.man
 
 
 ########################################################################

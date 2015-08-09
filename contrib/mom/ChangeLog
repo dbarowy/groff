@@ -1,9 +1,5 @@
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
-	* groff_mom.7.man, mom.am: Rename `groff_mom.man'.
-
-2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
-
 	* mom.am: Add `Last update'.  Setup Emacs mode.
 
 * Sun Jul 26 2015

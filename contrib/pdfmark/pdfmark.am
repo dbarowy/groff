@@ -3,7 +3,7 @@
 #      Written by Keith Marshall (keith.d.marshall@ntlworld.com)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -23,7 +23,7 @@
 pdfmark_srcdir = $(top_srcdir)/contrib/pdfmark
 pdfmark_builddir = $(top_builddir)/contrib/pdfmark
 
-man1_MANS += contrib/pdfmark/pdfroff.1.n
+man1_MANS += contrib/pdfmark/pdfroff.n
 
 bin_SCRIPTS += pdfroff
 
@@ -52,7 +52,7 @@ EXTRA_DIST += \
   contrib/pdfmark/README \
   contrib/pdfmark/PROBLEMS \
   contrib/pdfmark/TODO \
-  contrib/pdfmark/pdfroff.1.man \
+  contrib/pdfmark/pdfroff.man \
   contrib/pdfmark/pdfroff.sh
 
 PDFMARK_PFLAG =-dpaper=$(PAGE) -P-p$(PAGE)

@@ -7,7 +7,7 @@
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Moved to automake by Bertrand Garrigues
 
-# Last update: 7 Aug 2015
+# Last update: 5 Aug 2015
 
 # This file is part of `gpinyin' which is part of `groff'.
 
@@ -31,10 +31,10 @@ gpinyin_srcdir = $(top_srcdir)/contrib/gpinyin
 bin_SCRIPTS += gpinyin
 gpinyindir = $(gpinyin_dir)
 dist_gpinyin_DATA = contrib/gpinyin/subs.pl
-man1_MANS += contrib/gpinyin/gpinyin.1.n
+man1_MANS += contrib/gpinyin/gpinyin.n
 EXTRA_DIST += \
   contrib/gpinyin/ChangeLog \
-  contrib/gpinyin/gpinyin.1.man \
+  contrib/gpinyin/gpinyin.man \
   contrib/gpinyin/gpinyin.pl
 
 gpinyin: contrib/gpinyin/gpinyin.pl

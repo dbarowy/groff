@@ -4,7 +4,7 @@
 #
 # Copyright (C) 2014-2015  Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -23,8 +23,8 @@
 ########################################################################
 
 bin_PROGRAMS += hpftodit
-man1_MANS += src/utils/hpftodit/hpftodit.1.n
-EXTRA_DIST += src/utils/hpftodit/hpftodit.1.man
+man1_MANS += src/utils/hpftodit/hpftodit.n
+EXTRA_DIST += src/utils/hpftodit/hpftodit.man
 hpftodit_LDADD = libgroff.a $(LIBM)
 hpftodit_SOURCES = \
   src/utils/hpftodit/hpftodit.cpp \

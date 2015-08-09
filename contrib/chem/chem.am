@@ -7,7 +7,7 @@
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Moved to automake by Bertrand Garrigues
 #
-# Last update: 7 Aug 2015
+# Last update: 6 Aug 2015
 #
 # This file is part of `chem' which is part of `groff'.
 #
@@ -56,14 +56,14 @@ nodist_chemexample122_DATA = contrib/chem/examples/122/README
 endif
 EXTRA_DIST += \
   contrib/chem/ChangeLog \
-  contrib/chem/chem.1.man \
+  contrib/chem/chem.man \
   contrib/chem/chem.pic \
   contrib/chem/chem.pl \
   contrib/chem/README.txt \
   contrib/chem/examples/README.txt \
   contrib/chem/examples/122/README.txt
 
-man1_MANS += contrib/chem/chem.1.n
+man1_MANS += contrib/chem/chem.n
 MOSTLYCLEANFILES += $(CHEM_GENEXAMPLES) $(nodist_chemexample122_DATA) \
   contrib/chem/README
 

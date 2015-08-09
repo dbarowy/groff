@@ -1,7 +1,7 @@
 # Copyright (C) 2014-15
 #      Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -19,10 +19,10 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 prefixexecbin_PROGRAMS += troff
-PREFIXMAN1 += src/roff/troff/troff.1.n
+PREFIXMAN1 += src/roff/troff/troff.n
 EXTRA_DIST += \
   src/roff/troff/column.cpp \
-  src/roff/troff/troff.1.man \
+  src/roff/troff/troff.man \
   src/roff/troff/TODO
 troff_LDADD = libgroff.a lib/libgnu.a $(LIBM)
 troff_SOURCES = \

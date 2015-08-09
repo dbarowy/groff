@@ -1,7 +1,7 @@
 # Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
 #
-# Latest update: 7 Aug 2015
+# Latest update: 5 Aug 2015
 #
 # This file is part of groff.
 #
@@ -19,8 +19,8 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bin_PROGRAMS += lkbib
-man1_MANS += src/utils/lkbib/lkbib.1.n
-EXTRA_DIST += src/utils/lkbib/lkbib.1.man
+man1_MANS += src/utils/lkbib/lkbib.n
+EXTRA_DIST += src/utils/lkbib/lkbib.man
 lkbib_LDADD = libbib.a libgroff.a $(LIBM)
 lkbib_SOURCES = src/utils/lkbib/lkbib.cpp
 src/utils/lkbib/lkbib.$(OBJEXT): defs.h
