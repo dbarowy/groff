@@ -2,7 +2,7 @@
 #      Written by Werner Lemberg (wl@gnu.org)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 5 Aug 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of groff.
 #
@@ -132,4 +132,4 @@ uninstall-hdtbl-hook:
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

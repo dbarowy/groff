@@ -8,7 +8,7 @@
 #   Automake migration by 
 #   Bertrand Garrigues <bertrand.garrigues@laposte.net>
 #
-# Latest update: 5 Aug 2015
+# Latest update: 13 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -66,4 +66,4 @@ groff_opts_with_arg.txt: groff_opts_no_arg.txt
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

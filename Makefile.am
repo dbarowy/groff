@@ -899,4 +899,4 @@ MOSTLYCLEANFILES += $(prefixexecbin_SCRIPTS) $(bin_SCRIPTS) \
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

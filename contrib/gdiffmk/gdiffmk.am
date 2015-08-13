@@ -7,7 +7,7 @@
 # Written by Mike Bianchi <MBianchi@Foveal.com <mailto:MBianchi@Foveal.com>>
 # Automake migration by Bertrand Garrigues
 #
-# Last update: 5 Aug 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of the gdiffmk utility, which is part of groff.
 #
@@ -68,4 +68,4 @@ clean_gdiffmk_check:
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

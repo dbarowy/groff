@@ -3,7 +3,7 @@
 #  Original Makefile.sub written by Deri James <deri@chuzzlewit.demon.co.uk>.
 #  Automake migration by Bertrand Garrigues
 #
-# Last update: 5 Aug 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of groff.
 #
@@ -56,4 +56,4 @@ pdfmom: $(gropdf_dir)/pdfmom.pl $(SH_DEPS_SED_SCRIPT)
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

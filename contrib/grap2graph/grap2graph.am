@@ -1,6 +1,6 @@
 # Copyright (C) 2003-2015  Free Software Foundation, Inc.
 #
-# Last update: 5 Aug 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of groff.
 #
@@ -37,4 +37,4 @@ grap2graph: $(grap2graph_srcdir)/grap2graph.sh
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

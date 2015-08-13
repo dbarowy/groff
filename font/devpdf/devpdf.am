@@ -4,7 +4,7 @@
 #      by Deri James <deri@chuzzlewit.demon.co.uk>
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of groff.
 #
@@ -173,4 +173,4 @@ uninstall_devpdf:
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

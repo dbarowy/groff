@@ -2,12 +2,12 @@
 
 # File position: <groff-source>/contrib/gpinyin/gpinyin.am
 
-# Copyright (C) 2014-15
+# Copyright (C) 2014-2015
 #   Free Software Foundation, Inc.
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Moved to automake by Bertrand Garrigues
 
-# Last update: 5 Aug 2015
+# Last update: 2013 Aug 2015
 
 # This file is part of `gpinyin' which is part of `groff'.
 
@@ -58,4 +58,4 @@ uninstall-gpinyin-hook:
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

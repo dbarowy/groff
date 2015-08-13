@@ -2,9 +2,9 @@
 #
 # File position: <groff-source>/src/utils/addftinfo/addftinfo.am
 #
-# Copyright (C) 2014-15  Free Software Foundation, Inc.
+# Copyright (C) 2014-2015  Free Software Foundation, Inc.
 #
-# Latest update: 5 Aug 2015
+# Latest update: 13 Aug 2015
 #
 # `groff' is free software; you can redistribute it and/or modify it
 # under the terms of the GNU General Public License as published by
@@ -36,4 +36,4 @@ addftinfo_SOURCES = \
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:

@@ -3,7 +3,7 @@
 #      Written by Keith Marshall (keith.d.marshall@ntlworld.com)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 5 Aug 2015
+# Last update: 13 Aug 2015
 #
 # This file is part of groff.
 #
@@ -99,4 +99,4 @@ endif
 ### Emacs settings
 # Local Variables:
 # mode: makefile-automake
-# End.
+# End:
