@@ -2,7 +2,7 @@
 # Original Makefile.in written by James Clark (jjc@jclark.com)
 # Migrated to Automake by Bertrand Garrigues
 #
-# Last update: 5 Aug 2015
+# Last update: 20 Aug 2015
 #
 # This file is part of groff.
 #
@@ -734,8 +734,8 @@ uninstall-prefix-man:
 	done
 else
 man1_MANS += $(PREFIXMAN1)
-man1_MANS += $(PREFIXMAN5)
-man1_MANS += $(PREFIXMAN7)
+man5_MANS += $(PREFIXMAN5)
+man7_MANS += $(PREFIXMAN7)
 install-prefix-man:
 uninstall-prefix-man:
 generate_man_files:

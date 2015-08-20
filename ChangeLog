@@ -1,3 +1,7 @@
+2015-08-20  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* Makefile.am: Fix definition of man[157]_MANS.
+
 2015-08-13  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* all *.am: Correct Emacs mode `End:' instead of `End.'.
