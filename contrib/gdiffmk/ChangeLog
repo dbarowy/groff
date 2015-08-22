@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gdiffmk.1.man: Rename `gdiffmk.man'.
+
+	* gdiffmk.am: Include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* gdiffmk.am: Add `Last update'.  Setup Emacs mode.
@@ -12,14 +18,14 @@
 			test -e ...  with  test -f
 
 			use  ${DIFFCMD}  for the last  diff
-		add	
+		add
 			-s SEDCMD  option
 			OPTION="$1"
-	
+
 		many other cosmetic changes documented in the bug Discussion.
 		especially:
 			capitalize variables  e.g.  CMD=`basename $0`
- 
+
 	fix  make check  tests within gdiffmk
 	* tests/gdiffmk_tests.sh
 		add  set -e
@@ -149,7 +155,7 @@
 
 	First import of gdiffmk files.
 
-Copyright 2004-2009, 2014
+Copyright 2004-2009, 2014-2015
   Free Software Foundation, Inc.
 
 Copying and distribution of this file, with or without modification,

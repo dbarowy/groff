@@ -1,5 +1,13 @@
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
+	* groffer.1.man: Rename `groffer.man'.
+
+	* roff2.1.man: Rename `roff2.man'.
+
+	* groffer.am: Include renamings.
+
+2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
+
 	* groffer.am: Add `Last update'.  Setup Emacs mode.
 
 2015-04-04  Werner LEMBERG  <wl@gnu.org>

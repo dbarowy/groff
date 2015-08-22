@@ -1,3 +1,13 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* mmroff.1.man: Rename `mmroff.man'.
+
+	* groff_mm.7.man: Rename `groff_mm.man'.
+
+	* groff_mmse.7.man: Rename `groff_mmse.man'.
+
+	* mm.am: Include renamings.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* mm.am, Makefile.sim: Add `Last update'.  Setup Emacs mode.

@@ -1,3 +1,15 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* groff_filenames.5.man: Rename `groff_filenames.1.man'.
+
+	* groff_filenames.am: Include section changing.
+
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* groff_filenames.1.man: Rename `groff_filenames.man'.
+
+	* groff_filenames.am: Include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* groff_filenames.am: Add `Last update'.  Setup Emacs mode.

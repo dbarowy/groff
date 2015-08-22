@@ -1,3 +1,13 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* all man-pages *.man: Rename man-pages such that the man section
+	number before the final `.man'.
+
+	* all *.am: Include renaming.
+
+	* Makefile.am: Reset `.man.n' by `.[157].man.n' with SUFFIXES
+	`.[157].man .n'.
+
 2015-08-20  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* Makefile.am: Fix definition of man[157]_MANS.

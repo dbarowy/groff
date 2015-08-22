@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gxditview.1.man: Rename `gxditview.man'.
+
+	* xditview.am: Include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* xditview.am: Add `Last update'.  Setup Emacs mode.

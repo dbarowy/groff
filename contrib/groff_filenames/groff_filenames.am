@@ -26,10 +26,10 @@
 
 ########################################################################
 
-man7_MANS += contrib/groff_filenames/groff_filenames.n
+man5_MANS += contrib/groff_filenames/groff_filenames.n
 EXTRA_DIST += \
   contrib/groff_filenames/ChangeLog \
-  contrib/groff_filenames/groff_filenames.1.man
+  contrib/groff_filenames/groff_filenames.5.man
 
 
 ########################################################################

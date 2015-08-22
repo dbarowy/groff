@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* pdfroff.1.man: Rename `pdfroff.man'.
+
+	* pdfmark.am: Add `Last update'.  Setup Emacs mode.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* pdfmark.am: Add `Last update'.  Setup Emacs mode.

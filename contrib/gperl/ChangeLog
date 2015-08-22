@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gperl.1.man: Rename `gperl.man'.
+
+	* gperl.am: Include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* gperl.am: Add `Last update'.  Setup Emacs mode.

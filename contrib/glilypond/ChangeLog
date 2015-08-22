@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* glilypond.1.man: Rename `glilypond.man'.
+
+	* glilypond.am: Include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* glilypond.am: Add `Last update'.  Setup Emacs mode.

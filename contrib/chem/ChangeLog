@@ -1,6 +1,12 @@
+2015-08-22  Bernd Warken  <bernd.warken@web.de>
+
+	* chem.1.man: Rename `chem.man'.
+
+	* chem.am: Include renaming.
+
 2015-08-05  Bernd Warken  <bernd.warken@web.de>
 
-	* chen.am: Add `Last update'.  Setup Emacs makefile-automake-mode.
+	* chem.am: Add `Last update'.  Setup Emacs makefile-automake-mode.
 
 2015-04-03  Werner LEMBERG  <wl@gnu.org>
 

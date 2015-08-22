@@ -1,3 +1,9 @@
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* gpinyin.1.man: Rename `gpinyin.man'.
+
+	* gpinyin.am: include renaming.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* gpinyin.am: Add `Last update'.  Setup Emacs mode.
