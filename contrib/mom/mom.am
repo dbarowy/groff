@@ -3,7 +3,7 @@
 #      Written by Werner Lemberg (wl@gnu.org)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 #
 # This file is part of groff.
 #
@@ -119,7 +119,7 @@ EXTRA_DIST += $(MOMHTMLDOCFILES) $(MOMEXAMPLEFILES) \
   contrib/mom/NEWS \
   contrib/mom/TODO \
   contrib/mom/copyright \
-  contrib/mom/groff_mom.man \
+  contrib/mom/groff_mom.7.man \
   contrib/mom/om.tmac-u
 
 MOSTLYCLEANFILES += \

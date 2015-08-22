@@ -2,12 +2,12 @@
 #
 # File position: <groff-source>/contrib/gdiffmk/gdiffmk.am
 #
-# Copyright (C) 2004, 2006, 2009, 2014-15
+# Copyright (C) 2004, 2006, 2009, 2014-2015
 #    Free Software Foundation, Inc.
 # Written by Mike Bianchi <MBianchi@Foveal.com <mailto:MBianchi@Foveal.com>>
 # Automake migration by Bertrand Garrigues
 #
-# Last update: 13 Aug 2015
+# Last update: 20 Aug 2015
 #
 # This file is part of the gdiffmk utility, which is part of groff.
 #
@@ -30,7 +30,7 @@ bin_SCRIPTS += gdiffmk
 TESTS += contrib/gdiffmk/tests/gdiffmk_tests.sh
 man1_MANS += contrib/gdiffmk/gdiffmk.n
 EXTRA_DIST += \
-  contrib/gdiffmk/gdiffmk.man \
+  contrib/gdiffmk/gdiffmk.1.man \
   contrib/gdiffmk/ChangeLog \
   contrib/gdiffmk/README \
   contrib/gdiffmk/gdiffmk.sh \

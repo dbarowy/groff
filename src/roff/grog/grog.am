@@ -5,7 +5,7 @@
 # Copyright (C) 1993-2015
 #   Free Software Foundation, Inc.
 #
-# Latest update: 13 Aug 2015
+# Latest update: 22 Aug 2015
 #
 # This file is part of `grog' which is part of `groff'.
 #
@@ -31,7 +31,7 @@ grogdir = $(grog_dir)
 dist_grog_DATA = $(GROG)
 man1_MANS += src/roff/grog/grog.n
 EXTRA_DIST += \
-  src/roff/grog/grog.man \
+  src/roff/grog/grog.1.man \
   src/roff/grog/grog.pl
 
 # Perl version works for all parts of `groff'.

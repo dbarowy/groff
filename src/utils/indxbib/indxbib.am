@@ -1,7 +1,7 @@
 # Copyright (C) 2014-2015
 #      Free Software Foundation, Inc.
 #
-# Latest update: 13 Aug 2015
+# Latest update: 22 Aug 2015
 #
 # This file is part of groff.
 #
@@ -27,7 +27,7 @@ src/utils/indxbib/indxbib.$(OBJEXT): defs.h
 indxbib_LDADD = libbib.a libgroff.a $(LIBM)
 PREFIXMAN1 += src/utils/indxbib/indxbib.n
 EXTRA_DIST += \
-  src/utils/indxbib/indxbib.man \
+  src/utils/indxbib/indxbib.1.man \
   src/utils/indxbib/eign
 
 install-data-local: install_indxbib

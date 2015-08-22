@@ -3,7 +3,7 @@
 #      Written by Keith Marshall (keith.d.marshall@ntlworld.com)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 #
 # This file is part of groff.
 #
@@ -52,7 +52,7 @@ EXTRA_DIST += \
   contrib/pdfmark/README \
   contrib/pdfmark/PROBLEMS \
   contrib/pdfmark/TODO \
-  contrib/pdfmark/pdfroff.man \
+  contrib/pdfmark/pdfroff.1.man \
   contrib/pdfmark/pdfroff.sh
 
 PDFMARK_PFLAG =-dpaper=$(PAGE) -P-p$(PAGE)

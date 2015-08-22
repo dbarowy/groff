@@ -1,6 +1,6 @@
 # Copyright (C) 2001-2015  Free Software Foundation, Inc.
 #
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 #
 # This file is part of groff.
 #
@@ -25,7 +25,7 @@ man1_MANS += contrib/pic2graph/pic2graph.n
 bin_SCRIPTS += pic2graph
 EXTRA_DIST += \
   contrib/pic2graph/pic2graph.sh \
-  contrib/pic2graph/pic2graph.man
+  contrib/pic2graph/pic2graph.1.man
 pic2graph: $(pic2graph_srcdir)/pic2graph.sh
 	sed -e "s|[@]g[@]|$(g)|g" \
 	    -e "s|[@]VERSION[@]|$(VERSION)|" \

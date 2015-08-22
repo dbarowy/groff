@@ -8,7 +8,7 @@
 # Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
 
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 
 # This file is part of `groffer' which is part of `groff'.
 
@@ -40,12 +40,12 @@ ROFF2PROGS = \
 
 # Generated man templates
 ROFF2MAN = \
-  contrib/groffer/roff2dvi.man \
-  contrib/groffer/roff2html.man \
-  contrib/groffer/roff2pdf.man \
-  contrib/groffer/roff2ps.man \
-  contrib/groffer/roff2text.man \
-  contrib/groffer/roff2x.man
+  contrib/groffer/roff2dvi.1.man \
+  contrib/groffer/roff2html.1.man \
+  contrib/groffer/roff2pdf.1.man \
+  contrib/groffer/roff2ps.1.man \
+  contrib/groffer/roff2text.1.man \
+  contrib/groffer/roff2x.1.man
 
 GROFFER_PERL = \
   contrib/groffer/main_subs.pl \
@@ -54,9 +54,9 @@ GROFFER_PERL = \
   contrib/groffer/subs.pl
 
 GROFFER_REST = \
-  contrib/groffer/roff2.man \
+  contrib/groffer/roff2.1.man \
   contrib/groffer/version.sh \
-  contrib/groffer/groffer.man \
+  contrib/groffer/groffer.1.man \
   contrib/groffer/groffer.pl \
   contrib/groffer/roff2.pl
 
@@ -84,10 +84,10 @@ $(ROFF2PROGS): $(groffer_srcdir)/roff2.pl
 
 # we take roff2.man and replace the @ROFF2MODE@ by the type of file
 # (dvi, pdf, html etc ...)
-$(ROFF2MAN):  $(groffer_srcdir)/roff2.man
+$(ROFF2MAN):  $(groffer_srcdir)/roff2.1.man
 	@$(MKDIR_P) contrib/groffer
-	FILEMODE=`echo $@ | sed 's|contrib/groffer/roff2\([a-z][a-z]*\)\.man|\1|g'` \
-	  && sed -e 's/[@]ROFF2MODE[@]/'"$$FILEMODE"'/g' $(groffer_srcdir)/roff2.man > $@;
+	FILEMODE=`echo $@ | sed 's|contrib/groffer/roff2\([a-z][a-z]*\)\.1\.man|\1|g'` \
+	  && sed -e 's/[@]ROFF2MODE[@]/'"$$FILEMODE"'/g' $(groffer_srcdir)/roff2.1.man > $@;
 
 groffer: $(GROFFER_PERL) $(GROFFER_REST) $(SH_DEPS_SED_SCRIPT)
 	echo "Using perl version of groffer."; \

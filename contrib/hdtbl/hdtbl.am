@@ -2,7 +2,7 @@
 #      Written by Werner Lemberg (wl@gnu.org)
 #      Automake migration by Bertrand Garrigues
 #
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 #
 # This file is part of groff.
 #
@@ -97,7 +97,7 @@ MOSTLYCLEANFILES += $(HDTBLGENFILES) $(HDTBLPROCESSEDEXAMPLEFILES) \
 EXTRA_DIST += \
   contrib/hdtbl/ChangeLog \
   contrib/hdtbl/TODO \
-  contrib/hdtbl/groff_hdtbl.man \
+  contrib/hdtbl/groff_hdtbl.7.man \
   contrib/hdtbl/hdtbl.tmac-u \
   contrib/hdtbl/hdmisc.tmac-u
 

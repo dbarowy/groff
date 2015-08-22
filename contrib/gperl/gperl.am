@@ -2,11 +2,11 @@
 
 # File position: <groff-source>/contrib/gperl/gperl.am
 
-# Copyright (C) 2014-15  Free Software Foundation, Inc.
+# Copyright (C) 2014-2015  Free Software Foundation, Inc.
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
 
-# Last update: 18 Aug 2015
+# Last update: 22 Aug 2015
 
 # This file is part of `gperl' which is part of `groff'.
 
@@ -30,7 +30,7 @@ bin_SCRIPTS += gperl
 man1_MANS += contrib/gperl/gperl.n
 EXTRA_DIST += \
   contrib/gperl/ChangeLog \
-  contrib/gperl/gperl.man \
+  contrib/gperl/gperl.1.man \
   contrib/gperl/gperl.pl
 gperl: $(top_srcdir)/contrib/gperl/gperl.pl shdeps.sed
 	$(RM) $@

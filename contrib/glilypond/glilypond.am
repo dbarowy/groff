@@ -8,7 +8,7 @@
 # Bernd Warken <groff-bernd.warken-72@web.de>.
 # Automake migration by Bertrand Garrigues
 
-# Last update: 13 Aug 2015
+# Last update: 22 Aug 2015
 
 # This file is part of `glilypond' which is part of `groff'.
 
@@ -41,7 +41,7 @@ dist_glilypond_DATA = \
 EXTRA_DIST += \
   contrib/glilypond/ChangeLog \
   contrib/glilypond/ChangeLog.0x \
-  contrib/glilypond/glilypond.man \
+  contrib/glilypond/glilypond.1.man \
   contrib/glilypond/glilypond.pl \
   contrib/glilypond/README.txt \
   contrib/glilypond/examples/example.groff
