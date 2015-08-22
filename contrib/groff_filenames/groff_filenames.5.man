@@ -1,4 +1,4 @@
-.TH GROFF_FILENAMES @MAN7EXT@ "@MDATE@" "Groff Version @VERSION@"
+.TH GROFF_FILENAMES @MAN5EXT@ "@MDATE@" "Groff Version @VERSION@"
 .SH NAME
 groff_filenames \(em filename extensions for roff and groff
 .
@@ -10,7 +10,9 @@ groff_filenames \(em filename extensions for roff and groff
 .\" --------------------------------------------------------------------
 .
 .de co
-Copyright \(co 2013-2014 Free Software Foundation, Inc.
+Copyright \(co 2013-2015 Free Software Foundation, Inc.
+
+Last update: 22 Aug 2015
 
 This file is part of groff, a free software project.  You can
 redistribute it and/or modify it under the terms of the GNU General
@@ -588,7 +590,7 @@ pictures, see
 .
 .TP
 .IB <name> .pdfroff
-transform this file with
+ransform this file with
 .B pdfroff
 of the
 .I groff

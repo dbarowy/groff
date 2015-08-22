@@ -1,5 +1,9 @@
 2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
 
+	* groff_filenames.5.man: Use section 5 within this man-page.
+
+2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
+
 	* groff_filenames.5.man: Rename `groff_filenames.1.man'.
 
 	* groff_filenames.am: Include section changing.
