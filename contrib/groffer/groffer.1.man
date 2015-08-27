@@ -22,8 +22,6 @@ groffer \- display groff files and man\~pages on X and tty
 Copyright \(co 2001-2015
    Free Software Foundation, Inc.
 
-Author: Bernd Warken <groff-bernd.warken-72@web.de>
-
 Last update: 27 Aug 2015
 
 This file is part of groffer, which is part of groff, a free software
@@ -163,6 +161,8 @@ or
 .I \%dvi
 display program, a web browser by generating
 .I \%html
+or
+.I \%xhtml
 in
 .IR \%www\~mode ,
 or several
@@ -240,6 +240,7 @@ Long options can be abbreviated in several ways.
 .OP \-\-utf8
 .OP \-\-viewer prog
 .OP \-\-www
+.OP \-\-xhtml
 .OP \-\-x\~\fR|\fB\~\-\-X
 .YS
 .RE
@@ -524,6 +525,7 @@ The default modes are
 .IR "mode pdf" ,
 .IR "mode ps" ,
 .IR "mode html" ,
+.IR "mode xhtml" ,
 .IR "mode x" ,
 and
 .I "mode dvi"
@@ -694,6 +696,14 @@ and
 The text html viewer is
 .BR \%lynx (1).
 .
+By default, the existence of a sequence of standard web browsers is
+tested, starting with
+.BR \%konqueror (1)
+and
+.BR \%mozilla (1).
+The text html viewer is
+.BR \%lynx (1).
+.
 .
 .TP
 .B pdf
@@ -820,6 +830,19 @@ the default width of the geometry of the display program is chosen to
 .B X
 Equivalent to
 .BR \-\-mode=x .
+.
+.
+.TP
+.B xhtml
+Translate the input into
+.I xhtml
+format, which is an
+.I XML
+version of
+.IR html .
+.
+Then display the result in a web browser program, mostly the known
+.IR "html viewers" .
 .
 .
 .P
@@ -1066,6 +1089,7 @@ arguments are mapped to the corresponding
 option:
 .BR \%dvi ,
 .BR \%html ,
+.BR \%xhtml ,
 and
 .BR \%ps .
 All
@@ -2055,7 +2079,8 @@ in a PDF viewer
 .IP \*(BU 2m
 in a web browser
 .nh
-.RI ( html
+.RI ( html ,
+.RI ( xhtml
 or
 .IR \%www\~mode )
 .hy
@@ -3477,6 +3502,8 @@ for the
 .B ls
 program, decompress it, format it to
 .I \%html
+or
+.I \%xhtml
 format
 .nh
 .RI ( \%www\~mode )
@@ -3829,7 +3856,8 @@ Viewers for
 .BR \%lynx (1)
 Web-browsers for
 .BR \%groffer 's
-.I \%html
+.IR \%html ,
+.IR \%xhtml
 or
 .IR \%www\~mode .
 .

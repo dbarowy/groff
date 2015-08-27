@@ -5,8 +5,10 @@
 # Source file position: <groff-source>/contrib/groffer/subs.pl
 # Installed position: <prefix>/lib/groff/groffer/subs.pl
 
-# Copyright (C) 2006-2014  Free Software Foundation, Inc.
+# Copyright (C) 2006-2015  Free Software Foundation, Inc.
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
+
+# LAst update: 27 Aug 2015
 
 # This file is part of `groffer', which is part of `groff'.
 
@@ -66,7 +68,7 @@ sub main_set_options {
   'groff', 'help', 'intermediate-output', 'html', 'latin1', 'man',
   'no-location', 'no-man', 'no-special', 'pdf', 'pdf2', 'ps', 'rv',
   'source', 'text', 'to-stdout', 'text-device', 'tty', 'tty-device',
-  'utf8', 'version', 'whatis', 'where', 'www', 'x', 'X');
+  'utf8', 'version', 'whatis', 'where', 'www', 'x', 'X', 'xhtml');
 
 ### main_set_options()
   my @opts_groffer_long_arg =
@@ -75,10 +77,10 @@ sub main_set_options {
      # tty viewers are ignored
      'dvi-viewer-tty', 'html-viewer-tty', 'pdf-viewer-tty',
      'ps-viewer-tty', 'tty-viewer-tty', 'www-viewer-tty',
-     'X-viewer-tty', 'x-viewer-tty',
+     'X-viewer-tty', 'x-viewer-tty', 'xhtml-viewer-tty',,
      # viewers for modes are ignored
      'dvi-viewer', 'html-viewer', 'pdf-viewer', 'ps-viewer', 'tty-viewer',
-     'www-viewer', 'X-viewer', 'x-viewer',
+     'www-viewer', 'X-viewer', 'x-viewer', 'xhtml-viewer',
     );
 
   ##### groffer options inhereted from groff
@@ -190,9 +192,11 @@ sub main_set_options {
 			  '--where' => '--location',
 			  '--www' => '--html',
 			  '--X' => '--x',
+			  '--xhtml' => '--html',
 			  # '--dvi-viewer' => '--viewer',
 			  '--dvi-viewer-tty' => '--viewer',
 			  '--html-viewer-tty' => '--viewer',
+			  '--xhtml-viewer-tty' => '--pager',
 			  '--pdf-viewer-tty' => '--viewer',
 			  '--ps-viewer-tty' => '--viewer',
 			  '--tty-viewer' => '--pager',
@@ -657,6 +661,7 @@ sub main_parse_params {
 			'cp1047' => 'tty',
 			'dvi'=> 'dvi',
 			'html' => 'html',
+			'xhtml' => 'html',
 			'latin1' => 'tty',
 			'lbp' => 'groff',
 			'lj4' => 'groff',
@@ -1016,7 +1021,7 @@ sub main_set_mode {
       $Display{'MODE'} = $Opt{'MODE'};
       return 1;
     }
-    $Display{'MODE'} = $Opt{'MODE'} if $Opt{'MODE'} =~ /^html$/;
+    $Display{'MODE'} = $Opt{'MODE'} if $Opt{'MODE'} =~ /^x?html$/;
     @modes = ($Opt{'MODE'});
   } else {			# empty mode
     if ($Opt{'DEVICE'}) {
@@ -1876,6 +1881,21 @@ sub main_display {
       next SWITCH;
     };
 
+    /^xhtml$/ and do {
+      if ($Opt{'DEVICE'} && $Opt{'DEVICE'} ne 'xhtml') {
+	warn "main_display(): " .
+	  "wrong device for $Display{'MODE'} mode: $Opt{'DEVICE'};"
+      }
+      $modefile .= '.xhtml';
+      $groggy = `cat $tmp_cat | grog -Txhtml`;
+      die "main_display(): grog error;" if $?;
+      chomp $groggy;
+      print STDERR "grog output: $groggy\n" if $Debug{'GROG'};
+      &_do_display();
+      next SWITCH;
+    };
+
+
     /^pdf$/ and do {
       $modefile .= '.pdf';
       $groggy = `cat $tmp_cat | grog -Tpdf --ligatures`;
@@ -1946,7 +1966,7 @@ sub main_display {
 	die "main_display(): grog error;" if $?;
 	chomp $groggy;
 	print STDERR "grog output: $groggy\n" if $Debug{'GROG'};
-      } elsif ($Opt{'DEVICE'} =~ /^(X.*|dvi|html|lbp|lj4|ps)$/) {
+      } elsif ($Opt{'DEVICE'} =~ /^(X.*|dvi|html|xhtml|lbp|lj4|ps)$/) {
 	# these devices work with
 	$groggy = `cat $tmp_cat | grog -T$Opt{'DEVICE'} -X`;
 	die "main_display(): grog error;" if $?;

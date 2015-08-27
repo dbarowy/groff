@@ -5,8 +5,10 @@
 # Source file position: <groff-source>/contrib/groffer/subs.pl
 # Installed position: <prefix>/lib/groff/groffer/subs.pl
 
-# Copyright (C) 2006-2014  Free Software Foundation, Inc.
+# Copyright (C) 2006-2015  Free Software Foundation, Inc.
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
+
+# Last update: 27 Aug 2015
 
 # This file is part of `groffer', which is part of `groff'.
 
@@ -556,7 +558,7 @@ The most important groffer long options are
 --help		display this helping output.
 --html		display in a web browser.
 --man		check file parameters first whether they are man pages.
---mode=auto|dvi|groff|html|pdf|ps|source|text|tty|utf8|www|x|X
+--mode=auto|dvi|groff|html|pdf|ps|source|text|tty|utf8|www|x|X|xhtml
 		choose display mode.
 --no-man	disable man-page facility.
 --no-special	disable --all, --apropos*, and --whatis
@@ -572,6 +574,7 @@ The most important groffer long options are
 --whatis	display the file name and description of man pages
 --www		same as --html.
 --x --X		display with "gxditview" using an X* device.
+--xhtml		display html in XML mode using a web browser.
 
 The usual X Windows toolkit options transformed into GNU long options:
 --background=color, --bd=size, --bg=color, --bordercolor=color,
@@ -594,7 +597,7 @@ EOF
 # option.  The old options are only ignored:
 # --dvi-viewer=prog choose the viewer program for dvi mode.
 # --html-viewer=program
-#                  choose the web browser for html mode.
+#                  choose the web browser for html or xhtml mode.
 # --pdf-viewer=prog choose the viewer program for pdf mode.
 # --ps-viewer=prog  choose the viewer program for ps mode.
 # --tty-viewer=prog select a pager for tty mode; same as --pager.

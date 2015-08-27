@@ -5,10 +5,12 @@
 # Source file position: <groff-source>/contrib/groffer/groffer.pl
 # Installed position: <prefix>/bin/groffer
 
-# Copyright (C) 2006-2014
+# Copyright (C) 2006-2015
 #   Free Software Foundation, Inc.
 
 # Written by Bernd Warken <groff-bernd.warken-72@web.de>.
+
+# Last update: 27 Aug 2015
 
 # This file is part of `groffer', which is part of `groff'.
 
@@ -163,7 +165,8 @@ our @Conf_Files = (File::Spec->catfile(File::Spec->rootdir(),
 				      'groffer.conf')
 		 );
 
-our @Default_Modes = ('pdf', 'pdf2', 'html', 'ps', 'x', 'dvi', 'tty');
+our @Default_Modes = ('pdf', 'pdf2', 'html', 'xhtml', 'ps', 'x', 'dvi',
+		      'tty');
 our $Default_Resolution = 100;
 our $Default_tty_Device = 'utf8';
 
@@ -179,6 +182,9 @@ our %Viewer_tty = ('DVI' => [],
 
 our %Viewer_X = ('DVI' => ['kdvi', 'xdvi', 'dvilx'],
 		'HTML' => ['konqueror', 'epiphany'. 'mozilla-firefox',
+			   'firefox', 'mozilla', 'netscape', 'galeon',
+			   'opera', 'amaya','arena', 'mosaic'],
+		'XHTML' => ['konqueror', 'epiphany'. 'mozilla-firefox',
 			   'firefox', 'mozilla', 'netscape', 'galeon',
 			   'opera', 'amaya','arena', 'mosaic'],
 		'PDF' => ['okular', 'kpdf', 'acroread', 'evince',

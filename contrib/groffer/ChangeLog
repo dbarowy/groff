@@ -1,5 +1,11 @@
 2015-08-27  Bernd Warken  <groff-bernd.warken-72@web.de>
 
+	* *.pl: Add device (mode) `xhtml'.
+
+	* groffer.1.man: Add documentation for device `xhtml'.
+
+2015-08-27  Bernd Warken  <groff-bernd.warken-72@web.de>
+
 	* groffer.1.man: Correct the documentation for `--viewer'.
 
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
