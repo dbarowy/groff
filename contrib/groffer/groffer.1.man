@@ -19,7 +19,12 @@ groffer \- display groff files and man\~pages on X and tty
 .\" --------------------------------------------------------------------
 .
 .de co
-Copyright \(co 2001-2014 Free Software Foundation, Inc.
+Copyright \(co 2001-2015
+   Free Software Foundation, Inc.
+
+Author: Bernd Warken <groff-bernd.warken-72@web.de>
+
+Last update: 27 Aug 2015
 
 This file is part of groffer, which is part of groff, a free software
 project.
@@ -238,18 +243,6 @@ Long options can be abbreviated in several ways.
 .OP \-\-x\~\fR|\fB\~\-\-X
 .YS
 .RE
-.
-.
-.ig
-Replace these options by --viewer
-.OP \-\-dvi\-viewer prog
-.OP \-\-html\-viewer prog
-.OP \-\-pdf\-viewer prog
-.OP \-\-ps\-viewer prog
-.OP \-\-tty\-viewer prog
-.OP \-\-www\-viewer prog
-.OP \-\-x\-viewer\~\fR|\fB\~\-\-X\-viewer prog
-..
 .
 .
 .TP
@@ -621,14 +614,6 @@ in this sequence.
 .B \-\-dvi
 Equivalent to
 .BR \-\-mode=\%dvi .
-.TQ
-.BI \-\-viewer \ prog
-Choose a viewer program for
-.IR \%dvi\~mode .
-.
-This can be a file name or a program to be searched in
-.SM
-.BR $PATH .
 .
 Known \%\f(CRX\~Window\fP
 .I \%dvi
@@ -636,8 +621,6 @@ viewers include
 .BR \%xdvi (1)
 and
 .BR \%dvilx (1).
-.
-In each case, arguments can be provided additionally.
 .
 .
 .TP
@@ -650,15 +633,6 @@ Equivalent to
 .B \-\-html
 Equivalent to
 .BR \-\-mode=html .
-.TQ
-.B \-\-viewer
-Choose a web browser program for viewing in
-.IR \%html\~mode .
-.
-It can be the path name of an executable file or a program in
-.BR $PATH .
-.
-In each case, arguments can be provided additionally.
 .
 .
 .TP
@@ -888,29 +862,12 @@ Equivalent to
 .B \-\-pdf2
 Equivalent to
 .BR \-\-mode=pdf2 .
-.TQ
-.BI \-\-viewer \ prog
-Choose a viewer program for
-.IR \%pdf\~mode .
-.
-This can be a file name or a program to be searched in
-.SM
-.BR $PATH ;
-arguments can be provided additionally.
 .
 .
 .TP
 .B \-\-ps
 Equivalent to
 .BR \-\-mode=ps .
-.TQ
-.BI \-\-viewer \ prog
-Choose a viewer program for
-.IR \%ps\~mode .
-.
-This can be a file name or a program to be searched in
-.SM
-.BR $PATH .
 .
 Common Postscript viewers include
 .BR \%okular (1),
@@ -947,10 +904,6 @@ It will not be displayed in graphical mode.
 .B \-\-tty
 Equivalent to
 .BR \-\-mode=tty .
-.TQ
-.BI \-\-viewer \ prog
-Choose a text pager for mode
-.IR tty .
 The standard pager is
 .BR less (1).
 This option is equivalent to
@@ -963,31 +916,30 @@ The option argument can be a file name or a program to be searched in
 arguments can be provided additionally.
 .
 .
+.TT
+.BI \-\-viewer \ prog
+Choose a viewer program for actual device or mode.
+.
+This can be a file name or a program to be searched in
+.SM
+.BR $PATH ;
+arguments can be provided additionally.
+.
+.
 .TP
 .B \-\-www
 Equivalent to
 .BR \-\-mode=html .
-.TQ
-.B \-\-viewer
-.IR prog .
 .
 .
 .TP
 .B \-\-X\~\fR|\fB\~\-\-x
 Equivalent to
 .BR \-\-mode=x .
-.TQ
-.BI \-\-viewer " prog"
-Choose a viewer program for
-.IR \%x\~mode .
 Suitable viewer programs are
 .BR \%gxditview (@MAN1EXT@)
 which is the default and
 .BR \%xditview (1).
-The argument can be any executable file or a program in
-.SM
-.BR $PATH ;
-arguments can be provided additionally.
 .
 .
 .TP
@@ -3331,7 +3283,6 @@ or
 \-\-foreground=DarkBlue
 \-\-resolution=100
 \-\-viewer=gxditview \-geometry 900x1200
-\-\-viewer xpdf \-Z 150
 .fi
 .hy
 .ft

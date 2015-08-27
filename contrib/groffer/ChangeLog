@@ -1,3 +1,7 @@
+2015-08-27  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* groffer.1.man: Correct the documentation for `--viewer'.
+
 2015-08-05  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* groffer.1.man: Rename `groffer.man'.
