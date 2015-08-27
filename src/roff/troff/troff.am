@@ -19,7 +19,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 prefixexecbin_PROGRAMS += troff
-PREFIXMAN1 += src/roff/troff/troff.n
+PREFIXMAN1 += src/roff/troff/troff.1
 EXTRA_DIST += \
   src/roff/troff/column.cpp \
   src/roff/troff/troff.1.man \

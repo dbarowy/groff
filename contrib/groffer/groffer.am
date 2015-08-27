@@ -70,13 +70,13 @@ grofferdir = $(groffer_dir)
 bin_SCRIPTS += groffer $(ROFF2PROGS)
 groffer_DATA = $(GROFFER_PERL) contrib/groffer/version.sh
 man1_MANS += \
-  contrib/groffer/groffer.n \
-  contrib/groffer/roff2dvi.n \
-  contrib/groffer/roff2html.n \
-  contrib/groffer/roff2pdf.n \
-  contrib/groffer/roff2ps.n \
-  contrib/groffer/roff2text.n \
-  contrib/groffer/roff2x.n
+  contrib/groffer/groffer.1 \
+  contrib/groffer/roff2dvi.1 \
+  contrib/groffer/roff2html.1 \
+  contrib/groffer/roff2pdf.1 \
+  contrib/groffer/roff2ps.1 \
+  contrib/groffer/roff2text.1 \
+  contrib/groffer/roff2x.1
 MOSTLYCLEANFILES += $(ROFF2MAN)
 
 $(ROFF2PROGS): $(groffer_srcdir)/roff2.pl

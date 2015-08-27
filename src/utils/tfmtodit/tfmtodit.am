@@ -19,7 +19,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bin_PROGRAMS += tfmtodit
-man1_MANS += src/utils/tfmtodit/tfmtodit.n
+man1_MANS += src/utils/tfmtodit/tfmtodit.1
 EXTRA_DIST += src/utils/tfmtodit/tfmtodit.1.man
 tfmtodit_SOURCES = src/utils/tfmtodit/tfmtodit.cpp
 tfmtodit_LDADD = libgroff.a $(LIBM)

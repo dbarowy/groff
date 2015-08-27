@@ -63,7 +63,7 @@ EXTRA_DIST += \
   contrib/chem/examples/README.txt \
   contrib/chem/examples/122/README.txt
 
-man1_MANS += contrib/chem/chem.n
+man1_MANS += contrib/chem/chem.1
 MOSTLYCLEANFILES += $(CHEM_GENEXAMPLES) $(nodist_chemexample122_DATA) \
   contrib/chem/README
 

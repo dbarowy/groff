@@ -386,6 +386,35 @@ orientation:
 .
 .
 .TP
+.B pdfpic
+A single macro is provided in this file,
+.BR PSPIC ,
+to include a PDF graphic in a document, i.e. under the output device
+.BR \-Tpdf .
+.
+For all other devices,
+.B pspic
+is used.
+.
+So
+.B pdfpic
+is an extension of
+.B pspic.
+.
+By that you can now even replace all
+.B PSPIC
+by
+.BR PDFPIC ,
+nothing gets lost by that.
+.
+The options of
+.B PDFPIC
+are identical to the
+.B PSDIF
+options.
+.
+.
+.TP
 .B pic
 This file provides proper definitions for the macros
 .B PS

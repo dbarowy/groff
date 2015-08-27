@@ -29,7 +29,7 @@ GROG = src/roff/grog/subs.pl
 # grog_dir is defined by a m4 macro
 grogdir = $(grog_dir)
 dist_grog_DATA = $(GROG)
-man1_MANS += src/roff/grog/grog.n
+man1_MANS += src/roff/grog/grog.1
 EXTRA_DIST += \
   src/roff/grog/grog.1.man \
   src/roff/grog/grog.pl

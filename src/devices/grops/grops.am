@@ -27,7 +27,7 @@ grops_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grops/grops.n
+man1_MANS += src/devices/grops/grops.1
 EXTRA_DIST += \
   src/devices/grops/grops.1.man \
   src/devices/grops/psfig.diff \

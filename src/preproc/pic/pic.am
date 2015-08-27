@@ -38,7 +38,7 @@ pic_SOURCES = \
 pic_CPPFLAGS = $(AM_CPPFLAGS) \
   -I $(top_srcdir)/src/preproc/pic \
   -I $(top_builddir)/src/preproc/pic
-PREFIXMAN1 += src/preproc/pic/pic.n
+PREFIXMAN1 += src/preproc/pic/pic.1
 
 src/preproc/pic/pic-lex.$(OBJEXT): src/preproc/pic/pic.hpp
 EXTRA_DIST += \

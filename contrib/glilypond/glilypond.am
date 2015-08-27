@@ -28,7 +28,7 @@
 ########################################################################
 glilypond_srcdir = $(top_srcdir)/contrib/glilypond
 bin_SCRIPTS += glilypond
-man1_MANS += contrib/glilypond/glilypond.n
+man1_MANS += contrib/glilypond/glilypond.1
 
 # files going to lib directory `$(glilypond_dir)'
 # TODO glilypond_dir is subsitued by configure.ac, check if this could be removed

@@ -24,7 +24,7 @@ grotty_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grotty/grotty.n
+man1_MANS += src/devices/grotty/grotty.1
 EXTRA_DIST += \
   src/devices/grotty/grotty.1.man \
   src/devices/grotty/TODO

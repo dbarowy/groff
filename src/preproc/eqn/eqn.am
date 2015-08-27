@@ -45,7 +45,7 @@ eqn_SOURCES = \
   src/preproc/eqn/pbox.h \
   src/preproc/eqn/eqn.h
 
-PREFIXMAN1 += src/preproc/eqn/eqn.n src/preproc/eqn/neqn.n
+PREFIXMAN1 += src/preproc/eqn/eqn.1 src/preproc/eqn/neqn.1
 EXTRA_DIST += \
   src/preproc/eqn/TODO \
   src/preproc/eqn/neqn.sh \

@@ -20,7 +20,7 @@
 
 if !WITHOUT_X11
 bin_PROGRAMS += xtotroff
-man1_MANS += src/utils/xtotroff/xtotroff.n
+man1_MANS += src/utils/xtotroff/xtotroff.1
 xtotroff_SOURCES = src/utils/xtotroff/xtotroff.c
 XLIBS=$(LIBXUTIL) $(LIBGROFF)
 xtotroff_LDADD = libxutil.a libgroff.a $(X_LIBS) $(X_PRE_LIBS) \

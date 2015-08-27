@@ -1,3 +1,11 @@
+2015-08-27  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* tmac/pfdpic.tmac: Add file for macro PDFPIC.
+
+	* tmac/tmac.am: Add new tmac file.
+
+	* man/groff_tmac.5.man: Add definition for the new tmac.
+
 2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* all man-pages *.man: Rename man-pages such that the man section

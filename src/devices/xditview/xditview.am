@@ -46,7 +46,7 @@ gxditview_SOURCES = $(GXDITVIEWSOURCES)
 nodist_gxditview_SOURCES = $(XDITVIEW_GENHDRS)
 CLEANFILES += $(XDITVIEW_GENHDRS)
 
-man1_MANS += src/devices/xditview/gxditview.n
+man1_MANS += src/devices/xditview/gxditview.1
 
 # Because we defined gxditview_CPPFLAGS, automake renames all the xditview's 
 # objects, adding an "gxditview-" prefix. 

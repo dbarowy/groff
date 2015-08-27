@@ -24,7 +24,7 @@ tbl_SOURCES = \
   src/preproc/tbl/main.cpp \
   src/preproc/tbl/table.cpp \
   src/preproc/tbl/table.h
-PREFIXMAN1 += src/preproc/tbl/tbl.n
+PREFIXMAN1 += src/preproc/tbl/tbl.1
 EXTRA_DIST += src/preproc/tbl/tbl.1.man
 
 

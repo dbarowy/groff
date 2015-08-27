@@ -27,7 +27,7 @@ grn_SOURCES = \
   src/preproc/grn/gprint.h
 src/preproc/grn/main.$(OBJEXT): defs.h
 grn_LDADD = libgroff.a lib/libgnu.a $(LIBM)
-PREFIXMAN1 += src/preproc/grn/grn.n
+PREFIXMAN1 += src/preproc/grn/grn.1
 EXTRA_DIST += src/preproc/grn/README src/preproc/grn/grn.1.man
 
 

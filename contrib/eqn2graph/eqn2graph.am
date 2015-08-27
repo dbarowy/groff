@@ -23,7 +23,7 @@
 
 eqn2graph_srcdir = $(top_srcdir)/contrib/eqn2graph
 bin_SCRIPTS += eqn2graph
-man1_MANS += contrib/eqn2graph/eqn2graph.n
+man1_MANS += contrib/eqn2graph/eqn2graph.1
 EXTRA_DIST += \
   contrib/eqn2graph/eqn2graph.1.man \
   contrib/eqn2graph/eqn2graph.sh

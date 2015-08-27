@@ -708,29 +708,23 @@ if USEPROGRAMPREFIX
 generate_man_files: $(PREFIXMAN1)
 install-prefix-man:
 	for f in $(PREFIXMAN1); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/1/'`; \
-	  cp -f $$f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  cp -f $$f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 	for f in $(PREFIXMAN5); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/5/'`; \
-	  cp -f $$f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  cp -f $$f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 	for f in $(PREFIXMAN7); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/7/'`; \
-	  cp -f $$f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  cp -f $$f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 uninstall-prefix-man:
 	for f in $(PREFIXMAN1); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/1/'`; \
-	  rm -f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  rm -f $(DESTDIR)$(man1dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 	for f in $(PREFIXMAN5); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/5/'`; \
-	  rm -f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  rm -f $(DESTDIR)$(man5dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 	for f in $(PREFIXMAN7); do \
-	  manfile_final_name=`basename $$f | sed 's/n$$/7/'`; \
-	  rm -f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)$$manfile_final_name; \
+	  rm -f $(DESTDIR)$(man7dir)/$(NAMEPREFIX)`basename $$f`; \
 	done
 else
 man1_MANS += $(PREFIXMAN1)
@@ -829,7 +823,7 @@ EXTRA_DIST += \
   ChangeLog.116 \
   ChangeLog.117 \
   ChangeLog.118 \
-  ChangeLog.119 \
+   ChangeLog.119 \
   ChangeLog.120 \
   ChangeLog.121 \
   FDL \
@@ -854,92 +848,11 @@ MOSTLYCLEANFILES += $(prefixexecbin_SCRIPTS) $(bin_SCRIPTS) \
   $(PREFIXMAN1) $(PREFIXMAN5) $(PREFIXMAN7) \
   test-groff
 
-# Rule to build .man files. The brackets around the @ are used to prevent the 
-# substitution of the variable by automake. 
-
-SUFFIXES = .1.man .n
-
-.1.man.n:
-	@echo Making $@ from $<
-	rm -f $@
-	$(MKDIR_P) `dirname $@`
-	@LC_ALL=C \
-	 sed -e "s|[@]APPRESDIR[@]|$(appresdir)|g" \
-	     -e "s|[@]BINDIR[@]|$(bindir)|g" \
-	     -e "s|[@]BROKEN_SPOOLER_FLAGS[@]|$(BROKEN_SPOOLER_FLAGS)|g" \
-	     -e "s|[@]COMMON_WORDS_FILE[@]|$(common_words_file)|g" \
-	     -e "s|[@]DATASUBDIR[@]|$(datasubdir)|g" \
-	     -e "s|[@]DEFAULT_INDEX[@]|$(indexdir)/$(indexname)|g" \
-	     -e "s|[@]DEFAULT_INDEX_NAME[@]|$(indexname)|g" \
-	     -e "s|[@]DEVICE[@]|$(DEVICE)|g" \
-	     -e "s|[@]DOCDIR[@]|$(docdir)|g" \
-	     -e "s|[@]EXAMPLEDIR[@]|$(exampledir)|g" \
-	     -e "s|[@]FONTDIR[@]|$(fontdir)|g" \
-	     -e "s|[@]g[@]|$(g)|g" \
-	     -e "s![@]G[@]!`echo $(g) | tr [a-z] [A-Z]`!g" \
-	     -e "s|[@]HTMLDOCDIR[@]|$(htmldocdir)|g" \
-	     -e "s|[@]INDEX_SUFFIX[@]|$(indexext)|g" \
-	     -e "s|[@]LEGACYFONTDIR[@]|$(legacyfontdir)|g" \
-	     -e "s|[@]LOCALFONTDIR[@]|$(localfontdir)|g" \
-	     -e "s|[@]LOCALMACRODIR[@]|$(localtmacdir)|g" \
-	     -e "s|[@]MACRODIR[@]|$(tmacdir)|g" \
-	     -e "s|[@]MAN1EXT[@]|$(man1ext)|g" \
-	     -e "s|[@]MAN5EXT[@]|$(man5ext)|g" \
-	     -e "s|[@]MAN7EXT[@]|$(man7ext)|g" \
-	     -e "s|[@]MDATE[@]|`$(SHELL) $(top_srcdir)/mdate.sh $<`|g" \
-	     -e "s|[@]OLDFONTDIR[@]|$(oldfontdir)|g" \
-	     -e "s|[@]PDFDOCDIR[@]|$(pdfdocdir)|g" \
-	     -e "s|[@]SYSTEMMACRODIR[@]|$(systemtmacdir)|g" \
-	     -e "s|[@]TMAC_AN_PREFIX[@]|$(tmac_an_prefix)|g" \
-	     -e "s|[@]TMAC_M_PREFIX[@]|$(tmac_m_prefix)|g" \
-	     -e "s|[@]TMAC_MDIR[@]|$(tmacdir)/mm|g" \
-	     -e "s|[@]TMAC_S_PREFIX[@]|$(tmac_s_prefix)|g" \
-	     -e "s|[@]VERSION[@]|$(VERSION)|g" \
-	 $< >$@
-
-SUFFIXES = .5.man .n
-
-.5.man.n:
-	@echo Making $@ from $<
-	rm -f $@
-	$(MKDIR_P) `dirname $@`
-	@LC_ALL=C \
-	 sed -e "s|[@]APPRESDIR[@]|$(appresdir)|g" \
-	     -e "s|[@]BINDIR[@]|$(bindir)|g" \
-	     -e "s|[@]BROKEN_SPOOLER_FLAGS[@]|$(BROKEN_SPOOLER_FLAGS)|g" \
-	     -e "s|[@]COMMON_WORDS_FILE[@]|$(common_words_file)|g" \
-	     -e "s|[@]DATASUBDIR[@]|$(datasubdir)|g" \
-	     -e "s|[@]DEFAULT_INDEX[@]|$(indexdir)/$(indexname)|g" \
-	     -e "s|[@]DEFAULT_INDEX_NAME[@]|$(indexname)|g" \
-	     -e "s|[@]DEVICE[@]|$(DEVICE)|g" \
-	     -e "s|[@]DOCDIR[@]|$(docdir)|g" \
-	     -e "s|[@]EXAMPLEDIR[@]|$(exampledir)|g" \
-	     -e "s|[@]FONTDIR[@]|$(fontdir)|g" \
-	     -e "s|[@]g[@]|$(g)|g" \
-	     -e "s![@]G[@]!`echo $(g) | tr [a-z] [A-Z]`!g" \
-	     -e "s|[@]HTMLDOCDIR[@]|$(htmldocdir)|g" \
-	     -e "s|[@]INDEX_SUFFIX[@]|$(indexext)|g" \
-	     -e "s|[@]LEGACYFONTDIR[@]|$(legacyfontdir)|g" \
-	     -e "s|[@]LOCALFONTDIR[@]|$(localfontdir)|g" \
-	     -e "s|[@]LOCALMACRODIR[@]|$(localtmacdir)|g" \
-	     -e "s|[@]MACRODIR[@]|$(tmacdir)|g" \
-	     -e "s|[@]MAN1EXT[@]|$(man1ext)|g" \
-	     -e "s|[@]MAN5EXT[@]|$(man5ext)|g" \
-	     -e "s|[@]MAN7EXT[@]|$(man7ext)|g" \
-	     -e "s|[@]MDATE[@]|`$(SHELL) $(top_srcdir)/mdate.sh $<`|g" \
-	     -e "s|[@]OLDFONTDIR[@]|$(oldfontdir)|g" \
-	     -e "s|[@]PDFDOCDIR[@]|$(pdfdocdir)|g" \
-	     -e "s|[@]SYSTEMMACRODIR[@]|$(systemtmacdir)|g" \
-	     -e "s|[@]TMAC_AN_PREFIX[@]|$(tmac_an_prefix)|g" \
-	     -e "s|[@]TMAC_M_PREFIX[@]|$(tmac_m_prefix)|g" \
-	     -e "s|[@]TMAC_MDIR[@]|$(tmacdir)/mm|g" \
-	     -e "s|[@]TMAC_S_PREFIX[@]|$(tmac_s_prefix)|g" \
-	     -e "s|[@]VERSION[@]|$(VERSION)|g" \
-	 $< >$@
-
-SUFFIXES = .7.man .n
-
-.7.man.n:
+# Suffixe rule to build .1, .5 and .7 files from .1.man, .5.man and
+# .7.man files.  The brackets around the @ are used to prevent the
+# substitution of the variable by automake.
+SUFFIXES += .man
+.man:
 	@echo Making $@ from $<
 	rm -f $@
 	$(MKDIR_P) `dirname $@`

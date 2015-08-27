@@ -21,7 +21,7 @@
 #
 
 pic2graph_srcdir = $(top_srcdir)/contrib/pic2graph
-man1_MANS += contrib/pic2graph/pic2graph.n
+man1_MANS += contrib/pic2graph/pic2graph.1
 bin_SCRIPTS += pic2graph
 EXTRA_DIST += \
   contrib/pic2graph/pic2graph.sh \

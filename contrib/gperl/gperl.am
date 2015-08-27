@@ -27,7 +27,7 @@
 ########################################################################
 
 bin_SCRIPTS += gperl
-man1_MANS += contrib/gperl/gperl.n
+man1_MANS += contrib/gperl/gperl.1
 EXTRA_DIST += \
   contrib/gperl/ChangeLog \
   contrib/gperl/gperl.1.man \

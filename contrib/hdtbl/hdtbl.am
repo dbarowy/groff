@@ -22,7 +22,7 @@
 hdtbl_srcdir = $(top_srcdir)/contrib/hdtbl
 hdtbl_builddir = $(top_builddir)/contrib/hdtbl
 
-man7_MANS += contrib/hdtbl/groff_hdtbl.n
+man7_MANS += contrib/hdtbl/groff_hdtbl.7
 
 # Groff command used to generate .ps files
 HDTBL_TFLAG = -M$(hdtbl_srcdir) -M$(hdtbl_builddir)

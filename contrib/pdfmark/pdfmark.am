@@ -23,7 +23,7 @@
 pdfmark_srcdir = $(top_srcdir)/contrib/pdfmark
 pdfmark_builddir = $(top_builddir)/contrib/pdfmark
 
-man1_MANS += contrib/pdfmark/pdfroff.n
+man1_MANS += contrib/pdfmark/pdfroff.1
 
 bin_SCRIPTS += pdfroff
 

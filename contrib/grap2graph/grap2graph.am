@@ -22,7 +22,7 @@
 
 grap2graph_srcdir = $(top_srcdir)/contrib/grap2graph
 bin_SCRIPTS += grap2graph
-man1_MANS += contrib/grap2graph/grap2graph.n
+man1_MANS += contrib/grap2graph/grap2graph.1
 EXTRA_DIST += \
   $(grap2graph_srcdir)/grap2graph.sh \
   $(grap2graph_srcdir)/grap2graph.1.man

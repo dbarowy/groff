@@ -19,15 +19,15 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 man5_MANS += \
-  man/groff_font.n \
-  man/groff_out.n \
-  man/groff_tmac.n
+  man/groff_font.5 \
+  man/groff_out.5 \
+  man/groff_tmac.5
 man7_MANS += \
-  man/ditroff.n \
-  man/groff_char.n \
-  man/groff_diff.n \
-  man/groff.n \
-  man/roff.n
+  man/ditroff.7 \
+  man/groff_char.7 \
+  man/groff_diff.7 \
+  man/groff.7 \
+  man/roff.7
 EXTRA_DIST += \
   man/groff_font.5.man \
   man/groff_out.5.man \

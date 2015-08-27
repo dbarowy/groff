@@ -24,7 +24,7 @@ grodvi_LDADD = \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a $(LIBM)
-man1_MANS += src/devices/grodvi/grodvi.n
+man1_MANS += src/devices/grodvi/grodvi.1
 EXTRA_DIST += src/devices/grodvi/grodvi.1.man
 
 

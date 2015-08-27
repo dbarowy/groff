@@ -31,8 +31,8 @@ EXTRA_DIST += \
   src/devices/gropdf/pdfmom.1.man
 
 man1_MANS += \
-  src/devices/gropdf/gropdf.n \
-  src/devices/gropdf/pdfmom.n
+  src/devices/gropdf/gropdf.1 \
+  src/devices/gropdf/pdfmom.1
 
 gropdf: $(gropdf_dir)/gropdf.pl $(SH_DEPS_SED_SCRIPT)
 	$(RM) $@

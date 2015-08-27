@@ -23,12 +23,12 @@ tmac_srcdir = $(top_srcdir)/tmac
 tmac_builddir = $(top_builddir)/tmac
 
 man7_MANS += \
-  tmac/groff_ms.n \
-  tmac/groff_man.n \
-  tmac/groff_me.n \
-  tmac/groff_mdoc.n \
-  tmac/groff_trace.n \
-  tmac/groff_www.n
+  tmac/groff_ms.7 \
+  tmac/groff_man.7 \
+  tmac/groff_me.7 \
+  tmac/groff_mdoc.7 \
+  tmac/groff_trace.7 \
+  tmac/groff_www.7
 
 TMACNORMALFILES = \
   tmac/man.tmac \
@@ -48,6 +48,7 @@ TMACNORMALFILES = \
   tmac/trace.tmac \
   tmac/ps.tmac \
   tmac/psold.tmac \
+  tmac/pdfpic.tmac \
   tmac/pspic.tmac \
   tmac/psatk.tmac \
   tmac/pdf.tmac \

@@ -19,7 +19,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bin_PROGRAMS += lkbib
-man1_MANS += src/utils/lkbib/lkbib.n
+man1_MANS += src/utils/lkbib/lkbib.1
 EXTRA_DIST += src/utils/lkbib/lkbib.1.man
 lkbib_LDADD = libbib.a libgroff.a $(LIBM)
 lkbib_SOURCES = src/utils/lkbib/lkbib.cpp

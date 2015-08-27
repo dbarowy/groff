@@ -26,10 +26,10 @@ mm_builddir = $(top_builddir)/contrib/mm
 
 bin_SCRIPTS += mmroff
 
-man1_MANS += contrib/mm/mmroff.n
+man1_MANS += contrib/mm/mmroff.1
 man7_MANS += \
-  contrib/mm/groff_mm.n \
-  contrib/mm/groff_mmse.n
+  contrib/mm/groff_mm.7 \
+  contrib/mm/groff_mmse.7
 
 # Files installed in $(tmacdir)/mm
 MMFILES = \

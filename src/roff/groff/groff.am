@@ -35,7 +35,7 @@ groff_SOURCES = \
   src/roff/groff/pipeline.c \
   src/roff/groff/pipeline.h
 src/roff/groff/groff.$(OBJEXT): defs.h
-man1_MANS += src/roff/groff/groff.n
+man1_MANS += src/roff/groff/groff.1
 EXTRA_DIST += src/roff/groff/groff.1.man
 GROFF_OPTS_OUTPUT = \
   groff_opts_no_arg.txt \

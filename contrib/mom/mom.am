@@ -32,7 +32,7 @@ MOMPDFMOM = \
   PDFMOM_BIN_PATH="$(top_builddir)" \
   $(PDFMOMBIN) $(FFLAG) $(TFLAG) $(MOM_TFLAG) $(MOM_KFLAG)
 
-man7_MANS += contrib/mom/groff_mom.n
+man7_MANS += contrib/mom/groff_mom.7
 
 # Files installed in $(tmacdir).
 # MOMNORMALFILES are located in the source tree.

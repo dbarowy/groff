@@ -19,7 +19,7 @@
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 bin_PROGRAMS += pfbtops
-man1_MANS += src/utils/pfbtops/pfbtops.n
+man1_MANS += src/utils/pfbtops/pfbtops.1
 EXTRA_DIST += src/utils/pfbtops/pfbtops.1.man
 pfbtops_SOURCES = src/utils/pfbtops/pfbtops.c
 pfbtops_LDADD = libgroff.a $(LIBM)

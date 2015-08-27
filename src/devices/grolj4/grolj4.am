@@ -24,8 +24,8 @@ grolj4_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a
-man1_MANS += src/devices/grolj4/grolj4.n
-man5_MANS += src/devices/grolj4/lj4_font.n
+man1_MANS += src/devices/grolj4/grolj4.1
+man5_MANS += src/devices/grolj4/lj4_font.5
 EXTRA_DIST += \
   src/devices/grolj4/grolj4.1.man \
   src/devices/grolj4/lj4_font.5.man

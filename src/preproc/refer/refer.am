@@ -31,7 +31,7 @@ refer_SOURCES =  \
   src/preproc/refer/ref.h \
   src/preproc/refer/token.h \
   src/preproc/refer/command.h
-PREFIXMAN1 += src/preproc/refer/refer.n
+PREFIXMAN1 += src/preproc/refer/refer.1
 EXTRA_DIST += src/preproc/refer/TODO src/preproc/refer/refer.1.man
 CLEANFILES += \
   src/preproc/refer/label.cpp \

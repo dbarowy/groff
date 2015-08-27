@@ -32,7 +32,7 @@ post_grohtml_LDADD = $(LIBM) \
   libdriver.a \
   libgroff.a \
   lib/libgnu.a 
-man1_MANS += src/devices/grohtml/grohtml.n
+man1_MANS += src/devices/grohtml/grohtml.1
 EXTRA_DIST += src/devices/grohtml/grohtml.1.man
 
 
