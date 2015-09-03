@@ -1,8 +1,22 @@
+2015-09-03  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* tmac/troffrc: Add .mso for file `pdfpic.tmac'.
+
+2015-08-28  Bertrand Garrigues  <bertrand.garrigues@laposte.net>
+
+	* Makefile.am:
+	- Use only the naming `.section.man' for all man.pages.
+	- Replace `.man.n' by `.man' only, such that no	`.n'  is
+	generated.
+	- For example, the source `groff.7.man' is transformed into
+	`groff.7' in the same directory and then is by installing just
+	copied  into one of the suitable installed man directory.
+
 2015-08-27  Bernd Warken  <groff-bernd.warken-72@web.de>
 
-	* tmac/pfdpic.tmac: Add file for macro PDFPIC.
+	* tmac/pfdpic.tmac: Add tmac file for macro `PDFPIC'.
 
-	* tmac/tmac.am: Add new tmac file.
+	* tmac/tmac.am: Add new `pdfpic.tmac' file.
 
 	* man/groff_tmac.5.man: Add definition for the new tmac.
 

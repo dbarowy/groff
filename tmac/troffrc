@@ -52,5 +52,6 @@ troffrc!X100 troffrc!X100-12 troffrc!lj4 troff!lbp troffrc!html troffrc!pdf
 .
 .\" Handle PS images.
 .do mso pspic.tmac
+.do mso pdfpic.tmac
 .
 .\" Don't let blank lines creep in here.
