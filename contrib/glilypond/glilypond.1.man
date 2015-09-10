@@ -14,7 +14,9 @@ glilypond \(em integrate lilypond parts into groff
 .\" --------------------------------------------------------------------
 .
 .de co
-Copyright \(co 2013-2014 Free Software Foundation, Inc.
+Copyright \(co 2013-2015 Free Software Foundation, Inc.
+
+Last update: 10 Sep 2015
 
 This file is part of glilypond, which is part of GNU groff, a free
 software project.
@@ -74,6 +76,9 @@ request, such that
 .BR groff (@MAN1EXT@)
 can transform it into a format that can be displayed directly.
 .
+.B .PDFPIC
+is available, but does on yet work with lilypond.
+.
 .
 .P
 Files in
@@ -81,6 +86,81 @@ Files in
 language and
 .I "standard input"
 can be provided as arguments.
+.
+.
+.\" --------------------------------------------------------------------
+.SH "WORKING GLILYPOND"
+.\" --------------------------------------------------------------------
+.
+Together with
+.BR .PSPIC ,
+.B glilypond can work only for
+.I troff
+devices without
+.I pdf
+and
+.I X
+devices.
+.
+.
+.P
+I.e. the following
+.B groff
+devices work,
+.BR -Tps ,
+.BR -Tdvi ,
+.BR -Thtml ,
+and
+.BR -Txhtml .
+.
+.
+.P
+I'm not sure about the
+.B ldp
+and
+.B lj4
+devices.
+.
+.
+.P
+In
+.BR groffer ,
+it is easier to use the following device options, either
+.
+.BR --ps ,
+.BR --div ,
+.BR --html,
+or
+.BR --xhtml .
+.
+.
+.P
+Unfortunately, the
+.B groff
+option
+.B -Tpdf
+does not work and the
+.B groffer
+default
+.I pdf
+works neither.
+.
+.
+.P
+But
+.B groffer
+has an additional
+.IR "pdf mode" ,
+not available in
+.BR groff .
+.
+It is based on the
+.I ps mode
+in
+.B groff
+and is called through
+.B groffer --pdf2
+.IR roff-file-with-lilypond .
 .
 .
 .\" --------------------------------------------------------------------
@@ -605,75 +685,10 @@ are needed for the display which can take a long time.
 .\" --------------------------------------------------------------------
 .
 .\" --------------------------------------------------------------------
-.SS "Mode ly2eps"
-.\" --------------------------------------------------------------------
-.
-This mode is the default.
-.
-It can also be chosen by the option
-.BR --ly2eps .
-.
-.
-.P
-In this mode, the
-.B .ly
-files are transformed by the
-.B lilypond
-program into many files of different formats, including
-.I eps
-files, using
-.RS
-.EX
-.BI "$ lilypond \-\-ps \-dbackend=eps \-dgs\-load\-fonts \-\-output=" file\-name
-.EE
-.RE
-for each
-.B .ly
-file.
-.
-The output
-.I file\-name
-must be provided without an extension, its directory is temporary.
-.
-.
-.P
-There are many
-.I EPS
-files created.
-.
-One having the complete transformed
-.B ly
-file, named
-.IB file\-name .eps \fR.\fP
-.
-.
-.P
-Moreover there are
-.I EPS
-files for each page, named
-.IB file\-name \- digit .eps \fR.\fP
-.
-.
-.P
-The last step to be done is replacing all
-.I lilypond
-parts by the collection of the corresponding
-.I EPS
-page files.
-.
-This is done by
-.I groff
-commands
-.EX
-.BI ".PSPIC " file-name \- digit .eps
-.EE
-.
-.
-.\" --------------------------------------------------------------------
 .SS "Mode pdf2eps"
 .\" --------------------------------------------------------------------
 .
-This mode can be chosen by the option
+This mode is the actual default and can also be chosen by the option
 .BR --pdf2eps .
 .
 .
@@ -758,6 +773,76 @@ command
 .BI ".PSPIC " file-name .eps
 .EE
 .RE
+.
+.
+.\" --------------------------------------------------------------------
+.SS "Mode ly2eps"
+.\" --------------------------------------------------------------------
+.
+In earlier time, this mode was the default.
+.
+But now it does not work any more, so accept the new default
+.BR pdf2eps .
+.
+For testing, this mode can also be chosen by the
+.B glilypond
+option
+.BR --ly2eps .
+.
+.
+.P
+In this mode, the
+.B .ly
+files are transformed by the
+.B lilypond
+program into many files of different formats, including
+.I eps
+files, using
+.RS
+.EX
+.BI "$ lilypond \-\-ps \-dbackend=eps \-dgs\-load\-fonts \-\-output=" file\-name
+.EE
+.RE
+for each
+.B .ly
+file.
+.
+The output
+.I file\-name
+must be provided without an extension, its directory is temporary.
+.
+.
+.P
+There are many
+.I EPS
+files created.
+.
+One having the complete transformed
+.B ly
+file, named
+.IB file\-name .eps \fR.\fP
+.
+.
+.P
+Moreover there are
+.I EPS
+files for each page, named
+.IB file\-name \- digit .eps \fR.\fP
+.
+.
+.P
+The last step to be done is replacing all
+.I lilypond
+parts by the collection of the corresponding
+.I EPS
+page files.
+.
+This is done by
+.I groff
+commands
+.EX
+.BI ".PSPIC " file-name \- digit .eps
+.EE
 .
 .
 .\" --------------------------------------------------------------------

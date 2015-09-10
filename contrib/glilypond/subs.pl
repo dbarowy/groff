@@ -8,8 +8,10 @@ Subroutines for `glilypond'.
 Source file position: `<groff-source>/contrib/glilypond/subs.pl'
 Installed position: `<prefix>/lib/groff/glilypond/subs.pl'
 
-Copyright (C) 2013-2014  Free Software Foundation, Inc.
+Copyright (C) 2013-2015  Free Software Foundation, Inc.
   Written by Bernd Warken <groff-bernd.warken-72@web.de>
+
+Last update: 10 Sep 2015
 
 This file is part of `glilypond', which is part of `GNU groff'.
 
@@ -40,6 +42,9 @@ use integer;
 use utf8;
 use feature 'state';
 
+my $P_PIC;
+# $P_PIC = '.PDFPIC';
+$P_PIC = '.PSPIC';
 
 ########################################################################
 # subs for using several times
@@ -89,7 +94,7 @@ sub create_ly2eps {		       # `--ly2eps' default
 	  $file_path = File::Spec->catfile($eps_dir, $_);
 	}
       }
-      $out->print( '.PSPIC ' . $file_path );
+      $out->print( $P_PIC . ' ' . $file_path );
     }
   }				# end while readdir
   closedir( $dh );
@@ -144,7 +149,7 @@ sub create_pdf2eps {		       # `--pdf2eps'
     } # end Temp->{'eps_dir'}
   }
   # print into groff output
-  $out->print( '.PSPIC ' . $eps_path );
+  $out->print( $P_PIC . ' ' . $eps_path );
 }				# end sub create_pdf2eps()
 
 

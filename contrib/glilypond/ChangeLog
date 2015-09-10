@@ -1,3 +1,10 @@
+2015-09-10  Bernd Warken  <groff-bernd.warken-72@web.de>
+
+	* glilypond.1.man: New default `pdf2eps'.  Several fixes.
+
+	* subs.pl: Replace `.PSPIC' by `$P_PIC'.  Set new default sub on
+	top.
+
 2015-08-22  Bernd Warken  <groff-bernd.warken-72@web.de>
 
 	* glilypond.1.man: Rename `glilypond.man'.
