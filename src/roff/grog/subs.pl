@@ -12,7 +12,7 @@
 # The macros for identifying the devices were taken from Ralph
 # Corderoy's `grog.sh' of 2006.
 
-# Last update: 29 Jul 2015
+# Last update: 10 Sep 2015
 
 # This file is part of `grog', which is part of `groff'.
 
@@ -1129,6 +1129,7 @@ sub make_groff_line_rest {
     $file_args_included = 0;
   }
 
+###### make_groff_line_rest()
   foreach (@Command) {
     next unless /\s/;
     # when one argument has several words, use accents
@@ -1136,6 +1137,7 @@ sub make_groff_line_rest {
   }
 
 
+###### make_groff_line_rest()
   ##########
   # -m arguments
   my $nr_m_guessed = scalar @m;
@@ -1144,7 +1146,6 @@ sub make_groff_line_rest {
       'argument for -m found: ' . @m;
   }
 
-###### make_groff_line()
 
   my $nr_m_args = scalar @Mparams;	# m-arguments for grog
   my $last_m_arg = '';	# last provided -m option
@@ -1160,6 +1161,7 @@ sub make_groff_line_rest {
     $last_m_arg = $Mparams[0];
   }
 
+###### make_groff_line_rest()
   my $final_m = '';
   if ( $last_m_arg ) {
     my $is_equal = 0;
@@ -1180,7 +1182,7 @@ sub make_groff_line_rest {
 	'The argument is taken.';
       $final_m = $last_m_arg;
     }
-###### make_groff_line()
+###### make_groff_line_rest()
   } else {	# no -m arg provided
     if ( $nr_m_guessed > 1 ) {
       print STDERR __FILE__ . ' ' .  __LINE__ . ': ' .
@@ -1208,7 +1210,7 @@ sub make_groff_line_rest {
   }
 
   exit 0;
-} # make_groff_line()
+} # make_groff_line_rest()
 
 
 ########################################################################
