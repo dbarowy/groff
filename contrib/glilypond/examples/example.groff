@@ -10,7 +10,9 @@ Installed position:    <prefix>/share/man/man1/glilypond.1
 
 This file was written by Bernd Warken <groff\-bernd.warken\-72@web.de>.
 .
-Copyright (C) 2013-2014  Free Software Foundation, Inc.
+Copyright (C) 2013-2015  Free Software Foundation, Inc.
+
+Last update: 10 Sep 2015
 
 This file is part of glilypond, which is part of GNU groff, a free
 software project.
@@ -31,8 +33,9 @@ The license text is available in the internet at
 before
 .lilypond start
 \version "2.14.2"
-\relative c'' {
+\relative c' {
   \key c \minor
+  c d e f
   g(
   <ees c'>)
   <d f gis b>-.

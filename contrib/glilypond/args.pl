@@ -8,8 +8,10 @@ groff_lilypond - integrate `lilypond' into `groff' files
 Source file position: `<groff-source>/contrib/glilypond/args.pl'
 Installed position: `<prefix>/lib/groff/glilypond'
 
-Copyright (C) 2013-2014 Free Software Foundation, Inc.
+Copyright (C) 2013-2015 Free Software Foundation, Inc.
   Written by Bernd Warken <groff-bernd.warken-72@web.de>
+
+Last update: 10 Sep 2015
 
 This file is part of `GNU groff'.
 

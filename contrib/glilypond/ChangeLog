@@ -1,5 +1,9 @@
 2015-09-10  Bernd Warken  <groff-bernd.warken-72@web.de>
 
+	* glilypond.pl, args.pl, subs.pl: New default `eps_func' as `pdf'.
+
+2015-09-10  Bernd Warken  <groff-bernd.warken-72@web.de>
+
 	* glilypond.1.man: New default `pdf2eps'.  Several fixes.
 
 	* subs.pl: Replace `.PSPIC' by `$P_PIC'.  Set new default sub on

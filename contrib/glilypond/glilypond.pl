@@ -33,8 +33,10 @@ glilypond - integrate `lilypond' into `groff' files
 Source file position: `<groff-source>/contrib/glilypond/glilypond.pl'
 Installed position: `<prefix>/bin/glilypond'
 
-Copyright (C) 2013-2014 Free Software Foundation, Inc.
+Copyright (C) 2013-2015 Free Software Foundation, Inc.
   Written by Bernd Warken <groff-bernd.warken-72@web.de>
+
+Last update: 10 Sep 2015
 
 This file is part of `GNU groff'.
 
@@ -174,9 +176,9 @@ our $Args =
    'eps_dir' => EMPTYSTRING, # can be overwritten by `--eps_dir'
 
    # `eps-func' has 2 possible values:
-   # 1) `ly' from `--ly2eps' (default)
-   # 2) `pdf' `--pdf2eps'
-   'eps_func' => 'ly',
+   # 1) `pdf' `--pdf2eps' (default)
+   # 2) `ly' from `--ly2eps'
+   'eps_func' => 'pdf',
 
    # files names of temporary files start with this string,
    # can be overwritten by `--prefix'
