@@ -1222,8 +1222,8 @@ stores some documents using the ancient RUNOFF formatting language.
 .
 .TP
 CSTR Papers
-.UR http://\:cm.bell-labs.com/\:cm/\:cs/\:cstr.html
-The Bell Labs CSTR site
+.UR https://\:www.alcatel-lucent.com/\:bell-labs-journals
+The Bell Labs (now Alcatel) CSTR site
 .UE
 .
 stores the original
@@ -1259,7 +1259,7 @@ language are
 .TP
 [CSTR\~#54]
 J.\& F.\& Ossanna,
-.UR http://\:cm.bell-labs.com/\:cm/\:cs/\:cstr/\:54.ps.gz
+.UR http://\:www.troff.org/\:54.pdf
 .I "Nroff/\:Troff User\[aq]s Manual"
 .UE ;
 .
