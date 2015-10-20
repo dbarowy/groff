@@ -21,6 +21,7 @@ Foundation, 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA. */
 #include <string.h>
 #include <stdlib.h>
 
+#include "../../barowymissing.h"
 #include "lib.h"
 #include "box.h"
 extern int non_empty_flag;
